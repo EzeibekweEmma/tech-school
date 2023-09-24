@@ -1,0 +1,151 @@
+main {
+  display: flex;
+}
+/* Style for the background image */
+.background-image {
+  flex: 1;
+  background-image: url("../assets/classroom1.png");
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+/* Style for the blur background */
+.background-blur {
+  background-color: rgba(2, 49, 0, 0.3);
+  height: 100%;
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.background-blur h1 {
+  color: #fff;
+  font-size: 3rem;
+  font-weight: 600;
+  text-align: center;
+}
+
+.background-blur p {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+}
+
+.background-blur a {
+  color: #fff;
+  font-size: 1.2rem;
+  font-weight: 500;
+  text-align: center;
+  text-decoration: none;
+  padding: 0.5rem 1rem;
+  border-radius: 20px;
+  border: #047857 2px solid;
+}
+
+.background-blur a:hover {
+  background-color: #047857;
+  transition-duration: 500ms;
+}
+
+/* Style for the auth container */
+.auth-container {
+  flex: 1;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1rem;
+  padding: 2rem;
+  margin: 2rem;
+  max-width: 450px;
+  border-radius: 0.7rem;
+  min-width: fit-content;
+  background-color: #fff;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Style for the logo */
+.logo {
+  width: 80px;
+  height: 80px;
+  object-fit: cover;
+}
+
+/* Style for the form */
+.auth-form {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+/* Style for labels and inputs */
+.auth-form label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+}
+
+.auth-form span {
+  font-weight: bold;
+  color: #047857;
+}
+
+input[type="text"],
+input[type="email"],
+input[type="tel"],
+input[type="password"],
+input[type="file"],
+input[type="submit"] {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 0.5rem;
+  font-size: 1rem;
+}
+
+input[type="file"]:hover {
+  cursor: pointer;
+}
+
+input[type="text"]:focus,
+input[type="email"]:focus,
+input[type="tel"]:focus,
+input[type="password"]:focus,
+input[type="file"]:focus,
+input[type="submit"]:focus {
+  outline: none;
+  box-shadow: 0px 0px 5px #047857;
+}
+
+/* Style for the submit button */
+input[type="submit"] {
+  background-color: #047857;
+  color: #fff;
+  border: none;
+  font-weight: 600;
+  width: 100%;
+  cursor: pointer;
+}
+
+input[type="submit"]:hover {
+  background-color: #065f46;
+  transition-duration: 500ms;
+}
+
+input[type="submit"]:focus {
+  transform: scale(0.95);
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .auth-container {
+    max-width: 100%;
+    margin: 0;
+  }
+  .background-image {
+    display: none;
+  }
+}

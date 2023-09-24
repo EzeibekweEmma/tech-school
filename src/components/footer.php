@@ -32,7 +32,7 @@
         <div class="relative">
           <input type="email" required placeholder="username@site.com" class="input input-bordered w-full pr-16" />
           <button
-            class="btn bg-emerald-600 hover:bg-emerald-700 duration-500 focus:scale-90 text-white absolute top-0 right-0 rounded-l-none">Subscribe</button>
+            class="btn bg-emerald-700 hover:bg-emerald-800 duration-500 focus:scale-90 text-white absolute top-0 right-0 rounded-l-none">Subscribe</button>
         </div>
       </fieldset>
     </form>
