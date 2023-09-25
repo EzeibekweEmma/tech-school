@@ -48,6 +48,7 @@
               placeholder="Confirm Your Password" required>
           </label>
           <input type="submit" value="SIGN UP" name="signup">
+          <span>Already have an account? <a class="quick-link" href="./login.php">logIn here!</a></span>
         </form>
       </section>
     </main>
