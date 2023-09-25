@@ -40,7 +40,7 @@
               <input type="checkbox" id="remember-me" name="remember-me">
               <span>Remember Me</span>
             </label>
-            <a class="quick-link" href="./reset-password.php">Forgot Password?</a>
+            <a class="quick-link" href="./forget-password.php">Forgot Password?</a>
           </div>
           <input type="submit" value="LOGIN" name="login">
           <span>Don't have an account? <a class="quick-link" href="./sign-up.php">sign-up here!</a></span>

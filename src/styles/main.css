@@ -15,10 +15,17 @@ main {
   background-position: center;
   background-repeat: no-repeat;
   height: 100vh;
+  justify-content: center;
+  display: flex;
+  align-items: center;
 }
 
 .background-image2 {
   background-image: url("../assets/classroom1.png");
+}
+
+.background-image3 {
+  background-image: url("../assets/resetImage.png");
 }
 
 /* Style for the blur background */

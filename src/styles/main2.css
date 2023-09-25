@@ -1,0 +1,37 @@
+/* Style for the auth container */
+.auth-container {
+  background-color: #141129a8;
+  box-shadow: 5px 5px 10px rgba(0, 0, 0, 0.566);
+}
+
+.auth-container:hover {
+  background: #07064530;
+  transform: scale(1.1);
+  transition-duration: 1000ms;
+  transition-timing-function: ease-in-out;
+}
+
+/* Style for labels and inputs */
+.auth-form > label {
+  padding-bottom: 1rem;
+}
+
+/* Responsive styles */
+@media (max-width: 768px) {
+  .background-image3 {
+    background-image: none;
+    background-color: #fff;
+    box-shadow: none;
+  }
+  .auth-container {
+    background-color: #fff;
+    box-shadow: none;
+  }
+  .auth-container:hover {
+    background: none;
+    transform: none;
+  }
+  .background-image {
+    display: flex;
+  }
+}
