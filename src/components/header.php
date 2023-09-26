@@ -1,4 +1,4 @@
-<header class="flex justify-center relative bg-white shadow-lg">
+<header class="flex justify-center relative bg-white shadow-lg z-10">
   <section class="flex justify-between items-center h-16 w-[85vw]">
     <a href="/" class="flex">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
@@ -64,7 +64,7 @@
   <div class="mobile-menu absolute top-16 md:hidden translate-x-[50rem] text-white
       duration-500 bg-emerald-700 w-full flex justify-center py-5">
     <div class="flex flex-col font-semibold items-center">
-      <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Home</span>
+      <a href="/" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Home</span>
         <div class="h-1 w-full bg-white duration-500 -translate-x-24 group-hover:translate-x-0"></div>
       </a>
 
