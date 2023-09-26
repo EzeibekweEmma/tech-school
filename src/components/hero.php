@@ -1,4 +1,4 @@
-<section class="slide h-[50vh] md:h-[65vh] lg:h-[80vh] w-screen duration-700"
+<section class="slide h-[50vh] md:h-[65vh] lg:h-[80vh] w-screen duration-500"
   style="background: url('./src/assets/class-1.png') no-repeat center center / cover;">
   <!-- Slide -->
   <div class="relative flex items-center justify-center h-full w-full bg-[#101f3680] ">
@@ -14,8 +14,8 @@
         <path stroke-linecap="round" stroke-linejoin="round" d="M4.5 12h15m0 0l-6.75-6.75M19.5 12l-6.75 6.75" />
       </svg>
     </button>
-    <div class="text-white md:px-20">
-      <h1 class="text-h1 text-xl sm:text-3xl md:text-4xl lg:text-5xl font-medium">Power Your Future In Tech</h1>
+    <div class="text-white px-10 md:px-20">
+      <h1 class="text-h1 text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-medium">Power Your Future In Tech</h1>
       <p class="text-p text-base sm:text-lg font-bold text-emerald-400">Gain the digital career-ready skills to
         transform your future
       </p>
@@ -47,7 +47,7 @@ document.addEventListener("DOMContentLoaded", function() {
     },
     {
       h1: "Are You Ready?",
-      p: "To take the next step in your career and join the Tech School community!"
+      p: "To take the next step in your career and join the Tech School community?"
     }
   ];
   let currentSlideIndex = 0;
