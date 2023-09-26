@@ -9,12 +9,14 @@
   <title>Tech School</title>
 </head>
 
-<body class="bg-[#f5f6f8]">
+<body class="bg-[#f5f6f8] overflow-x-hidden">
   <div class="flex flex-col justify-between min-h-screen">
     <!-- header -->
     <?php include "./src/components/header.php"; ?>
+    <!-- hero -->
+    <?php include "./src/components/hero.php"; ?>
     <!-- main -->
-    <main class="flex justify-center">
+    <main class="flex justify-center h-52">
       <h2>Home</h2>
       <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Quisquam, voluptatum.</p>
     </main>
