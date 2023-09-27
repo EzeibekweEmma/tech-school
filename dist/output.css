@@ -1919,6 +1919,16 @@ details.collapse summary::-webkit-details-marker {
   margin-right: auto;
 }
 
+.my-4 {
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+
+.my-10 {
+  margin-top: 2.5rem;
+  margin-bottom: 2.5rem;
+}
+
 .mb-1 {
   margin-bottom: 0.25rem;
 }
@@ -1993,6 +2003,22 @@ details.collapse summary::-webkit-details-marker {
 
 .mt-1 {
   margin-top: 0.25rem;
+}
+
+.mb-4 {
+  margin-bottom: 1rem;
+}
+
+.mt-10 {
+  margin-top: 2.5rem;
+}
+
+.mb-10 {
+  margin-bottom: 2.5rem;
+}
+
+.mb-20 {
+  margin-bottom: 5rem;
 }
 
 .block {
@@ -2469,6 +2495,11 @@ details.collapse summary::-webkit-details-marker {
   line-height: 1rem;
 }
 
+.text-4xl {
+  font-size: 2.25rem;
+  line-height: 2.5rem;
+}
+
 .font-bold {
   font-weight: 700;
 }
@@ -2634,6 +2665,11 @@ details.collapse summary::-webkit-details-marker {
   .sm\:text-lg {
     font-size: 1.125rem;
     line-height: 1.75rem;
+  }
+
+  .sm\:text-4xl {
+    font-size: 2.25rem;
+    line-height: 2.5rem;
   }
 }
 

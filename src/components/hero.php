@@ -20,7 +20,7 @@
         transform your future
       </p>
       <a href="./src/pages/courses.php"
-        class="flex items-center mt-5 py-1.5 px-4 space-x-2 border hover:shadow-lg hover:bg-emerald-700 duration-500 border-emerald-700 w-fit font-medium rounded-full text-base sm:text-lg"><span>Get
+        class="flex items-center mt-5 py-1.5 px-4 space-x-2 border hover:shadow-lg hover:bg-emerald-700 duration-700 border-emerald-700 w-fit font-medium rounded-full text-base sm:text-lg"><span>Get
           Started</span>
         <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor"
           class="w-4 h-4">

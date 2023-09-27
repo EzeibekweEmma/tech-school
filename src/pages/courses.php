@@ -1,3 +1,22 @@
+<?php
+// Read course data from a JSON file
+$jsonData = file_get_contents('../components/courses.json');
+
+// Parse JSON into a PHP array
+$courses = json_decode($jsonData, true);
+
+// Handle the search form submission
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+  $search = $_POST["search"];
+  $filteredCourses = array_filter($courses, function ($course) use ($search) {
+    return stristr($course["course"], $search);
+  });
+} else {
+  $filteredCourses = $courses; // Display all courses by default
+}
+
+?>
+
 <!doctype html>
 <html lang="en">
 
@@ -46,29 +65,11 @@
     </section>
     <!-- main -->
     <main class="flex items-center justify-center -mt-24 md:-mt-32 z-10">
-
       <section class="flex flex-col items-center w-[85vw]">
+        <?php if (!empty($filteredCourses)) { ?>
         <section class="grid grid-cols-2 min-[850px]:grid-cols-3 xl:grid-cols-4 gap-4 mb-16">
-          <?php
-            // Read course data from a JSON file
-            $jsonData = file_get_contents('../components/courses.json');
-
-            // Parse JSON into a PHP array
-            $courses = json_decode($jsonData, true);
-
-            // Handle the search form submission
-            if ($_SERVER["REQUEST_METHOD"] == "POST") {
-                $search = $_POST["search"];
-                $filteredCourses = array_filter($courses, function ($course) use ($search) {
-                    return stristr($course["course"], $search);
-                });
-            } else {
-                $filteredCourses = $courses; // Display all courses by default
-            }
-
-            // Loop through the array and print filtered course details
-            foreach ($filteredCourses as $course) {
-            ?>
+          <?php foreach ($filteredCourses as $course) { ?>
+          <!-- Render matching courses here -->
           <div class="bg-white rounded-lg overflow-hidden hover:shadow-lg">
             <a href="#"><img class="w-full h-24 sm:h-32 lg:h-48 object-cover" src="<?php echo $course['image']; ?>"
                 alt="<?php echo $course['course']; ?>"></a>
@@ -81,16 +82,17 @@
                 More</a>
             </div>
           </div>
-          <?php
-            }
-            ?>
+          <?php } ?>
         </section>
+        <?php } else { ?>
+        <!-- Display "Course not found" message if no courses match the search -->
+        <p class="text-center text-2xl sm:text-4xl font-bold text-white mt-10 mb-20">Course not found!</p>
+        <?php } ?>
 
         <!-- FAQs -->
         <?php include "../components/FAQs.php"; ?>
 
       </section>
-
     </main>
     <!-- footer -->
     <?php include "../components/footer.php"; ?>
