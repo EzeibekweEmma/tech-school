@@ -1,4 +1,4 @@
-<header class="flex justify-center bg-white sticky top-0 shadow-lg z-10">
+<header class="flex justify-center bg-white sticky top-0 shadow-lg z-20">
   <section class="flex justify-between items-center h-16 w-[85vw]">
     <a href="/" class="flex">
       <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"

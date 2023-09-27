@@ -1,0 +1,484 @@
+[
+  {
+    "id": 1,
+    "image": "../assets/software-engineering.png",
+    "course": "Web Development Bootcamp",
+    "description": "Learn the essentials of web development from scratch.",
+    "price": 199.99,
+    "duration": "8 weeks/Full Time",
+    "outline": [
+      "HTML and CSS Fundamentals",
+      "JavaScript and jQuery",
+      "Responsive Web Design",
+      "Backend Development with Node.js",
+      "Database Management with MongoDB",
+      "API Development",
+      "Deployment and Hosting"
+    ],
+    "requirements": [
+      "Basic understanding of computer and internet",
+      "No prior coding experience required"
+    ]
+  },
+  {
+    "id": 2,
+    "image": "course2.jpg",
+    "course": "Data Science Masterclass",
+    "description": "Dive into data science and machine learning with hands-on projects.",
+    "price": 249.99,
+    "duration": "10 weeks/Per Time",
+    "outline": [
+      "Python Programming",
+      "Data Analysis with Pandas",
+      "Machine Learning with Scikit-Learn",
+      "Deep Learning with TensorFlow",
+      "Big Data and Spark",
+      "Data Visualization",
+      "Real-world Projects"
+    ],
+    "requirements": [
+      "Basic programming knowledge (Python is a plus)",
+      "Mathematics and statistics background is helpful but not mandatory"
+    ]
+  },
+  {
+    "id": 3,
+    "image": "course3.jpg",
+    "course": "Cybersecurity Fundamentals",
+    "description": "Learn how to protect computer systems and networks from cyber threats.",
+    "price": 149.99,
+    "duration": "6 weeks/Full Time",
+    "outline": [
+      "Introduction to Cybersecurity",
+      "Network Security",
+      "Ethical Hacking and Penetration Testing",
+      "Security Policies and Compliance",
+      "Incident Response",
+      "Security Tools and Technologies"
+    ],
+    "requirements": [
+      "Basic computer literacy",
+      "No prior cybersecurity experience required"
+    ]
+  },
+  {
+    "id": 4,
+    "image": "course4.jpg",
+    "course": "Artificial Intelligence Fundamentals",
+    "description": "Explore the world of artificial intelligence and its applications.",
+    "price": 199.99,
+    "duration": "8 weeks/Per Time",
+    "outline": [
+      "Introduction to AI",
+      "Machine Learning Algorithms",
+      "Natural Language Processing",
+      "Computer Vision",
+      "AI Ethics and Responsible AI",
+      "AI in Healthcare and Finance",
+      "AI Projects"
+    ],
+    "requirements": [
+      "Basic programming knowledge (Python preferred)",
+      "Mathematics background is helpful"
+    ]
+  },
+  {
+    "id": 5,
+    "image": "course5.jpg",
+    "course": "Data Analytics for Business",
+    "description": "Learn data analytics techniques to drive business decisions.",
+    "price": 179.99,
+    "duration": "8 weeks/Full Time",
+    "outline": [
+      "Data Collection and Cleaning",
+      "Data Visualization",
+      "Statistical Analysis",
+      "Predictive Analytics",
+      "Business Intelligence Tools",
+      "Case Studies"
+    ],
+    "requirements": [
+      "Basic understanding of data and business concepts",
+      "No prior data analytics experience required"
+    ]
+  },
+  {
+    "id": 6,
+    "image": "course6.jpg",
+    "course": "Software Engineering Principles",
+    "description": "Master the principles of software engineering and design.",
+    "price": 199.99,
+    "duration": "10 weeks/Full Time",
+    "outline": [
+      "Software Development Lifecycle",
+      "Requirements Engineering",
+      "Software Architecture",
+      "Quality Assurance and Testing",
+      "Agile and DevOps Practices",
+      "Software Project Management"
+    ],
+    "requirements": [
+      "Basic programming knowledge",
+      "No prior software engineering experience required"
+    ]
+  },
+  {
+    "id": 7,
+    "image": "course7.jpg",
+    "course": "Machine Learning Foundations",
+    "description": "Build a strong foundation in machine learning concepts and algorithms.",
+    "price": 219.99,
+    "duration": "12 weeks/Full Time",
+    "outline": [
+      "Introduction to Machine Learning",
+      "Supervised Learning",
+      "Unsupervised Learning",
+      "Deep Learning",
+      "Reinforcement Learning",
+      "Machine Learning Projects"
+    ],
+    "requirements": [
+      "Basic programming knowledge (Python recommended)",
+      "Mathematics background is helpful"
+    ]
+  },
+  {
+    "id": 8,
+    "image": "course8.jpg",
+    "course": "UX/UI Design Essentials",
+    "description": "Learn the essentials of user experience (UX) and user interface (UI) design.",
+    "price": 159.99,
+    "duration": "8 weeks/Full Time",
+    "outline": [
+      "Introduction to UX/UI Design",
+      "User Research and Personas",
+      "Wireframing and Prototyping",
+      "Visual Design Principles",
+      "Usability Testing",
+      "Design Tools and Software"
+    ],
+    "requirements": [
+      "Basic design skills (no prior UX/UI experience required)",
+      "Access to design software (e.g., Adobe XD, Figma)"
+    ]
+  },
+  {
+    "id": 9,
+    "image": "course9.jpg",
+    "course": "Computer Programming Fundamentals",
+    "description": "Learn the fundamentals of computer programming and coding.",
+    "price": 149.99,
+    "duration": "6 weeks/Full Time",
+    "outline": [
+      "Introduction to Programming",
+      "Variables and Data Types",
+      "Control Structures",
+      "Functions and Modularization",
+      "Debugging and Error Handling",
+      "Programming Projects"
+    ],
+    "requirements": [
+      "No prior coding experience required",
+      "Access to a computer and code editor"
+    ]
+  },
+  {
+    "id": 10,
+    "image": "course10.jpg",
+    "course": "Computer Graphics and Design",
+    "description": "Explore the world of computer graphics and digital design.",
+    "price": 179.99,
+    "duration": "8 weeks/Full Time",
+    "outline": [
+      "Introduction to Computer Graphics",
+      "Digital Imaging and Manipulation",
+      "3D Modeling and Animation",
+      "Graphic Design Principles",
+      "Game Design and Visual Effects",
+      "Graphic Design Projects"
+    ],
+    "requirements": [
+      "Basic computer skills",
+      "No prior graphics or design experience required"
+    ]
+  },
+  {
+    "id": 11,
+    "image": "course11.jpg",
+    "course": "Introduction to Python Programming",
+    "description": "Get started with Python, one of the most popular programming languages.",
+    "price": 99.99,
+    "duration": "4 weeks/Full Time",
+    "outline": [
+      "Python Basics and Syntax",
+      "Data Types and Variables",
+      "Control Flow and Loops",
+      "Functions and Modules",
+      "File Handling",
+      "Python Projects"
+    ],
+    "requirements": [
+      "No prior coding experience required",
+      "Access to a computer and Python IDE (e.g., Anaconda, PyCharm)"
+    ]
+  },
+  {
+    "id": 12,
+    "image": "course12.jpg",
+    "course": "Advanced Python Programming",
+    "description": "Take your Python skills to the next level with advanced topics and projects.",
+    "price": 129.99,
+    "duration": "6 weeks/Full Time",
+    "outline": [
+      "Object-Oriented Programming in Python",
+      "Web Development with Django",
+      "Data Analysis with Pandas and NumPy",
+      "Python for Automation",
+      "Python Projects"
+    ],
+    "requirements": [
+      "Basic knowledge of Python programming",
+      "Access to a computer and Python IDE"
+    ]
+  },
+  {
+    "id": 13,
+    "image": "course13.jpg",
+    "course": "Data Structures and Algorithms",
+    "description": "Master data structures and algorithms for efficient programming.",
+    "price": 199.99,
+    "duration": "8 weeks/Full Time",
+    "outline": [
+      "Array and Linked List",
+      "Stacks and Queues",
+      "Trees and Graphs",
+      "Sorting and Searching Algorithms",
+      "Dynamic Programming",
+      "Algorithmic Problem Solving"
+    ],
+    "requirements": [
+      "Solid programming skills (preferably in a language like Python, C++, or Java)",
+      "Basic knowledge of data structures"
+    ]
+  },
+  {
+    "id": 14,
+    "image": "course14.jpg",
+    "course": "Computer Networking Essentials",
+    "description": "Learn the fundamentals of computer networking and network administration.",
+    "price": 169.99,
+    "duration": "8 weeks/Per Time",
+    "outline": [
+      "Introduction to Networking",
+      "OSI Model and TCP/IP",
+      "Network Protocols and Services",
+      "Network Security",
+      "Wireless Networking",
+      "Hands-on Networking Labs"
+    ],
+    "requirements": [
+      "Basic understanding of computers and operating systems",
+      "No prior networking experience required"
+    ]
+  },
+  {
+    "id": 15,
+    "image": "course15.jpg",
+    "course": "Computer Simulation and Modeling",
+    "description": "Explore the world of computer simulation and modeling for various applications.",
+    "price": 189.99,
+    "duration": "10 weeks/Full Time",
+    "outline": [
+      "Introduction to Simulation",
+      "Simulation Techniques and Tools",
+      "Modeling and Analysis",
+      "Simulation in Industry and Research",
+      "Simulated Experiments",
+      "Simulation Projects"
+    ],
+    "requirements": [
+      "Basic computer literacy",
+      "No prior simulation experience required"
+    ]
+  },
+  {
+    "id": 16,
+    "image": "course16.jpg",
+    "course": "Web Design Technology",
+    "description": "Learn the latest web design technologies and trends for modern websites.",
+    "price": 159.99,
+    "duration": "8 weeks/Per Time",
+    "outline": [
+      "HTML5 and CSS3",
+      "Responsive and Mobile Design",
+      "JavaScript and jQuery",
+      "Front-End Frameworks",
+      "Web Animation and Interaction",
+      "Web Design Projects"
+    ],
+    "requirements": [
+      "Basic understanding of web technologies",
+      "No prior web design experience required"
+    ]
+  },
+  {
+    "id": 17,
+    "image": "course16.jpg",
+    "course": "Navigation Technology for GPS and GIS",
+    "description": "Explore navigation technology and its applications in GPS and GIS systems.",
+    "price": 149.99,
+    "duration": "6 weeks/Full Time",
+    "outline": [
+      "GPS Fundamentals",
+      "GIS (Geographic Information Systems)",
+      "Navigation Algorithms",
+      "GPS Applications",
+      "Mapping and Geospatial Analysis",
+      "Navigation Projects"
+    ],
+    "requirements": [
+      "Basic understanding of geography and maps",
+      "No prior navigation technology experience required"
+    ]
+  },
+  {
+    "id": 18,
+    "image": "course16.jpg",
+    "course": "Information Technology Management",
+    "description": "Learn IT management strategies and best practices for organizations.",
+    "price": 179.99,
+    "duration": "8 weeks/Full Time",
+    "outline": [
+      "IT Governance and Strategy",
+      "IT Project Management",
+      "Cybersecurity Management",
+      "IT Service Management (ITSM)",
+      "Cloud Computing and IT Infrastructure",
+      "Case Studies in IT Management"
+    ],
+    "requirements": [
+      "Basic knowledge of IT concepts",
+      "No prior IT management experience required"
+    ]
+  },
+  {
+    "id": 19,
+    "image": "course16.jpg",
+    "course": "Marine Technology and Ocean Engineering",
+    "description": "Explore marine technology and engineering for ocean exploration and conservation.",
+    "price": 199.99,
+    "duration": "10 weeks/Full Time",
+    "outline": [
+      "Introduction to Marine Technology",
+      "Underwater Vehicles and ROVs",
+      "Marine Sensors and Instrumentation",
+      "Oceanographic Data Analysis",
+      "Marine Robotics",
+      "Marine Technology Projects"
+    ],
+    "requirements": [
+      "Basic science and engineering background",
+      "No prior marine technology experience required"
+    ]
+  },
+  {
+    "id": 20,
+    "image": "course16.jpg",
+    "course": "Robotics and Automation",
+    "description": "Delve into the world of robotics and automation for industrial and AI applications.",
+    "price": 219.99,
+    "duration": "12 weeks/per Time",
+    "outline": [
+      "Robotics Fundamentals",
+      "Robot Kinematics and Dynamics",
+      "Robotic Vision and Perception",
+      "Control Systems and AI in Robotics",
+      "Industrial Automation",
+      "Robotics Projects"
+    ],
+    "requirements": [
+      "Basic programming and engineering knowledge",
+      "No prior robotics experience required"
+    ]
+  },
+  {
+    "id": 21,
+    "image": "course16.jpg",
+    "course": "Advanced Data Science and Big Data Analytics",
+    "description": "Master advanced data science techniques and work with big data.",
+    "price": 239.99,
+    "duration": "12 weeks/Full Time",
+    "outline": [
+      "Advanced Machine Learning",
+      "Deep Learning and Neural Networks",
+      "Big Data Technologies (Hadoop, Spark)",
+      "Data Engineering and ETL",
+      "Data Science in the Cloud",
+      "Advanced Data Science Projects"
+    ],
+    "requirements": [
+      "Solid background in data science and programming",
+      "Experience with data analytics tools"
+    ]
+  },
+  {
+    "id": 22,
+    "image": "course16.jpg",
+    "course": "Cloud Computing Essentials",
+    "description": "Explore cloud computing principles, services, and deployment models.",
+    "price": 169.99,
+    "duration": "8 weeks/Full Time",
+    "outline": [
+      "Introduction to Cloud Computing",
+      "Cloud Service Models (IaaS, PaaS, SaaS)",
+      "Cloud Deployment Models (Public, Private, Hybrid)",
+      "Cloud Security and Compliance",
+      "Cloud Migration and Management",
+      "Cloud Computing Projects"
+    ],
+    "requirements": [
+      "Basic understanding of IT concepts",
+      "Access to a computer with internet connectivity"
+    ]
+  },
+  {
+    "id": 23,
+    "image": "course16.jpg",
+    "course": "Blockchain Technology Fundamentals",
+    "description": "Learn the fundamentals of blockchain technology and cryptocurrencies.",
+    "price": 149.99,
+    "duration": "6 weeks/Full Time",
+    "outline": [
+      "Introduction to Blockchain",
+      "Blockchain Architecture and Consensus Mechanisms",
+      "Cryptocurrencies (e.g., Bitcoin, Ethereum)",
+      "Smart Contracts and DApps",
+      "Blockchain Use Cases",
+      "Blockchain Projects"
+    ],
+    "requirements": [
+      "Basic knowledge of computer science and cryptography",
+      "No prior blockchain experience required"
+    ]
+  },
+  {
+    "id": 24,
+    "image": "course16.jpg",
+    "course": "Artificial Intelligence Ethics and Responsible AI",
+    "description": "Explore the ethical considerations and responsible practices in AI development.",
+    "price": 129.99,
+    "duration": "4 weeks/Full Time",
+    "outline": [
+      "Ethical Issues in AI",
+      "Bias and Fairness in Machine Learning",
+      "AI Transparency and Accountability",
+      "AI Regulations and Guidelines",
+      "Responsible AI Development",
+      "AI Ethics Projects"
+    ],
+    "requirements": [
+      "Basic understanding of artificial intelligence concepts",
+      "Interest in ethical AI development"
+    ]
+  }
+]
