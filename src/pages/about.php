@@ -65,7 +65,7 @@
                 <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"
                   class="w-[300px] h-[150px] border-2 border-gray-200 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:shadow-lg"
                   required></textarea>
-                <button type="submit"
+                <button type="submit" name="send"
                   class="bg-emerald-700 text-white px-4 py-2 font-medium rounded-lg hover:bg-emerald-800 duration-500 w-full">Send</button>
               </div>
             </form>

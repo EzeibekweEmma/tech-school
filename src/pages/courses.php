@@ -50,7 +50,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               <input type="search" name="search" placeholder="Search for courses"
                 class="bg-white h-10 px-5 pr-10 rounded-full text-sm font-medium focus:outline-none w-full"
                 value="<?php echo isset($_POST['search']) ? htmlspecialchars($_POST['search']) : ''; ?>" />
-              <button type="submit" class="absolute right-0 top-0 mt-1 mr-2 p-2">
+              <button type="submit"
+                class="absolute right-0 top-0 mt-1 mr-2 p-2 rounded-full bg-emerald-50 hover:shadow-lg">
                 <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
                   stroke="currentColor" class="w-4 h-4">
                   <path stroke-linecap="round" stroke-linejoin="round"
