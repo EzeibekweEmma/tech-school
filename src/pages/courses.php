@@ -105,7 +105,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             <span class="hover:cursor-none h-16 md:h-20 w-28 mx-5">
               <img src="../assets/mastercard-logo.png" draggable="false" class="h-full w-full" alt="mastercard logo">
             </span>
-            <span class="hover:cursor-none h-20 md:h-24 w-32 md:w-36 mx-5">
+            <span class="hover:cursor-none h-20 md:h-24 w-40 md:w-44 mx-5">
               <img src="../assets/microsoft-logo.png" draggable="false" class="h-full w-full" alt="microsoft logo">
             </span>
             <span class="hover:cursor-none h-8 md:h-12 w-8 md:w-12 mx-5">
