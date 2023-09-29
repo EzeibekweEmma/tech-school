@@ -37,7 +37,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     <!-- hero -->
     <section class="h-[40vh] md:h-[45vh] lg:h-[50vh] w-screen duration-500"
       style="background: url('../assets/data-analytics.png') no-repeat center center / cover;">
-      <!-- Slide -->
       <div class="relative flex items-center justify-center h-full w-full bg-[#101f3680] ">
 
         <div class="px-10 md:px-20 -mt-14">

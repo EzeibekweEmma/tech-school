@@ -17,7 +17,6 @@
     <!-- hero -->
     <section class="h-[20vh] md:h-[30vh] w-screen duration-500"
       style="background: url('../assets/classroom1.png') no-repeat center center / cover;">
-      <!-- Slide -->
       <div class="relative flex items-center justify-center h-full w-full bg-[#101f3680] ">
         <div class="px-10 md:px-20">
           <h1 class="text-center mb-3 text-2xl sm:text-3xl md:text-5xl duration-700 font-bold text-white">About Us</h1>
@@ -70,30 +69,6 @@
               </div>
             </form>
           </section>
-
-          <!-- Contant Us! -->
-          <!-- <section class="flex flex-col items-center justify-center mb-16">
-          <h2 class="text-center mb-3 text-xl sm:text-3xl md:text-4xl font-bold text-emerald-700">Contant Us</h2>
-          <form action="" method="post">
-            <div class="flex flex-col items-center justify-center border p-6 sm:p-20 rounded-2xl shadow-xl">
-              <div class="flex flex-col items-center justify-center">
-                <input type="text" name="name" id="name" placeholder="Name"
-                  class="w-[300px] h-[50px] border-2 border-gray-200 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:shadow-lg"
-                  required>
-                <input type="email" name="email" id="email" placeholder="Email"
-                  class="w-[300px] h-[50px] border-2 border-gray-200 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:shadow-lg"
-                  required>
-                <input type="text" name="subject" id="subject" placeholder="Subject"
-                  class="w-[300px] h-[50px] border-2 border-gray-200 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:shadow-lg"
-                  required>
-              </div>
-              <textarea name="message" id="message" cols="30" rows="10" placeholder="Message"
-                class="w-[300px] h-[150px] border-2 border-gray-200 rounded-lg px-3 py-2 mb-3 focus:outline-none focus:shadow-lg"
-                required></textarea>
-              <button type="submit"
-                class="bg-emerald-700 text-white px-4 py-2 font-medium rounded-lg hover:bg-emerald-800 duration-500 w-full">Send</button>
-            </div>
-          </form> -->
         </section>
 
         <!-- Where Most of our students work -->
