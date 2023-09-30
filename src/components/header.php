@@ -16,7 +16,7 @@
     <nav class="hidden md:block">
       <div class="flex justify-between items-center space-x-4 text-lg text-emerald-700 font-semibold">
 
-        <a href="/" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Home</span>
+        <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Home</span>
           <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
         </a>
 

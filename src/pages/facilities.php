@@ -22,7 +22,7 @@
           <h1 class="text-center mb-5 text-2xl sm:text-3xl md:text-5xl duration-700 font-bold text-green-700">Our
             Classes And Facilities</h1>
           <!-- Facilities Hero -->
-          <?php include "../components/facilitiesHero.php"; ?>
+          <?php include "../components/facilities-hero.php"; ?>
         </section>
         <section class="mb-16 mt-10">
           <h2 class="mb-4 text-lg font-bold text-emerald-700">
