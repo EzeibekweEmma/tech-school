@@ -5,9 +5,43 @@ session_destroy();
 
 include "./config-db.php";
 
+// Check for the remember_user cookie
+if (isset($_COOKIE["remember_user"])) {
+  $rememberedCredentials = base64_decode($_COOKIE["remember_user"]);
+  list($email, $password) = explode(":", $rememberedCredentials);
+
+  // Validate and sanitize the email and password
+  $email = filter_var($email, FILTER_VALIDATE_EMAIL);
+  $password = $password;
+
+  if ($email === true || !empty($password)) {
+    // Perform the login using the retrieved credentials
+    $sql = "SELECT * FROM students WHERE email = '$email'";
+    $result = $conn->query($sql);
+
+    if ($result->num_rows === 1) {
+      $row = $result->fetch_assoc();
+      $hashedPassword = $row['password'];
+
+      if (password_verify($password, $hashedPassword)) {
+        session_start();
+        $_SESSION['student_id'] = $row['id'];
+        $_SESSION['student_full_name'] = $row['full_name'];
+        $_SESSION['student_profile_picture'] = $row['profile_picture'];
+
+        header('Location: ../../dashboard.php');
+        exit();
+      } else {
+        $error = 'Incorrect password. Please try again.';
+      }
+    }
+  }
+}
+
 if (isset($_POST["login"])) {
-  $email = $_POST["email"];
+  $email = trim($_POST["email"]);
   $password = $_POST["password"];
+  $rememberMe = isset($_POST["remember-me"]);
   $error = '';
 
   // Sanitize user input (prevent SQL injection)
@@ -25,6 +59,14 @@ if (isset($_POST["login"])) {
       $_SESSION['student_id'] = $row['id'];
       $_SESSION['student_full_name'] = $row['full_name'];
       $_SESSION['student_profile_picture'] = $row['profile_picture'];
+
+      // setting a cookie with the user's credentials if the "Remember Me" checkbox is checked
+      if ($rememberMe) {
+        $cookieName = "remember_user";
+        $cookieValue = base64_encode($email . ":" . $password);
+        $cookieExpiration = time() + 60 * 60 * 24 * 7; // Example: 7 days
+        setcookie($cookieName, $cookieValue, $cookieExpiration, "/");
+      }
 
       header('Location: ../../dashboard.php');
       exit();
@@ -69,10 +111,12 @@ $conn->close();
         <img src="../assets/favicon.svg" alt="logo" class="logo" />
         <form class="auth-form" method="POST" action="login.php">
           <label for="email"><span>Email:</span>
-            <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
+            <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required
+              value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
           </label>
           <label for="password"><span>Password:</span>
-            <input type="password" id="password" name="password" placeholder="Enter Your Password" minlength="8" required>
+            <input type="password" id="password" name="password" placeholder="Enter Your Password" minlength="8"
+              required>
           </label>
           <div class="remember-me">
             <label for="remember-me">

@@ -1,11 +1,11 @@
-<?php 
+<?php
 session_start();
-if (isset($_SESSION['student_id'])){
-  session_destroy();
-   header('Location: /');
-   exit();
-} else {
-  header('Location: /');
-  exit();
+
+// Clear the "Remember Me" cookie by setting its expiration date to the past
+if (isset($_COOKIE["remember_user"])) {
+  setcookie("remember_user", "", time() - 3600, "/");
 }
-?>
+
+session_destroy();
+header('Location: /');
+exit();

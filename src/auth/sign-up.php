@@ -5,9 +5,9 @@ session_destroy();
 include "./config-db.php";
 
 if (isset($_POST["signup"])) {
-  $fullName = $_POST["fullName"];
-  $email = $_POST["email"];
-  $phone = $_POST["phone"];
+  $fullName = trim($_POST["fullName"]);
+  $email = trim($_POST["email"]);
+  $phone = trim($_POST["phone"]);
   $confirmPassword = $_POST["confirmPassword"];
   $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
   $error = '';

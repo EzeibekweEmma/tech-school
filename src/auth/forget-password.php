@@ -4,7 +4,7 @@ session_start();
 session_destroy();
 if (isset($_POST["forget-password"])) {
 
-  $email = mysqli_real_escape_string($conn, $_POST["email"]);
+  $email = mysqli_real_escape_string($conn, trim($_POST["email"]));
   $error = '';
 
   $sql = "SELECT * FROM `students` WHERE(`email` = '$email')";
@@ -46,8 +46,7 @@ $conn->close();
           <img src="../assets/favicon.svg" alt="logo" class="logo" />
           <form class="auth-form" method="POST" action="">
             <label for="email"><span>Email:</span>
-              <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required
-                value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
+              <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
             </label>
             <input type="submit" value="RESET PASSWORD" name="forget-password">
           </form>

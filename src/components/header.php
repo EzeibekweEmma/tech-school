@@ -138,4 +138,4 @@
 </header>
 
 <!-- hamburger functionality -->
-<script src="../components/hamburger-functionality.js"></script>
+<script src="./src/components/hamburger-functionality.js"></script>
