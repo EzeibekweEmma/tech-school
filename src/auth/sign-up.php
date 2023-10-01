@@ -14,7 +14,8 @@
 <body class="bg-bgColor overflow-x-hidden">
   <div class="flex flex-col justify-between min-h-screen">
     <!-- header -->
-    <?//php include "../components/header.php"; ?>
+    <? //php include "../components/header.php"; 
+    ?>
     <!-- main -->
     <main>
       <section class="background-image">
@@ -67,7 +68,7 @@
           $password = password_hash($_POST["password"], PASSWORD_DEFAULT);
 
           // Handle profile picture upload (move the file to a folder and store the path)
-          $targetDir = "../assets/profile_pictures/";
+          $targetDir = basename($_FILES["profile"]["name"]) ? "../assets/profile_pictures/" : "";
           $targetFile = $targetDir . basename($_FILES["profile"]["name"]);
           move_uploaded_file($_FILES["profile"]["tmp_name"], $targetFile);
 
@@ -92,16 +93,9 @@
                                     VALUES ('$fullName', '$email', '$phone', '$targetFile', '$password')";
 
               if ($conn->query($sql) === TRUE) {
-    print '<div id="alertMessage" class="flex items-center h-10 bg-green-600/70 w-[95vw] space-x-2 pl-5 text-white rounded-lg">
-        <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6"
-            fill="none" viewBox="0 0 24 24"><path stroke-linecap="round"
-                stroke-linejoin="round" stroke-width="2"
-                d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-        <span>Registration successful!</span>
-    </div>';
-    header('Location: ./login.php');
-    exit;
-} else {
+                header('Location: ./login.php');
+                exit();
+              } else {
                 echo '<div id="alertMessage" class="flex items-center py-2 bg-red-600/70 w-[96vw] space-x-2 px-5 text-white rounded-lg">
                         <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6"
                             fill="none" viewBox="0 0 24 24"><path stroke-linecap="round"
