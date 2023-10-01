@@ -38,7 +38,7 @@ $conn->close();
 <body class="bg-bgColor overflow-x-hidden">
   <div class="flex flex-col justify-between min-h-screen">
     <!-- header -->
-    <?php include "../components/header.php"; ?>
+    <?php include "../components/auth-header.php"; ?>
     <!-- main -->
     <main>
       <section class="background-image background-image3">
@@ -46,7 +46,8 @@ $conn->close();
           <img src="../assets/favicon.svg" alt="logo" class="logo" />
           <form class="auth-form" method="POST" action="">
             <label for="email"><span>Email:</span>
-              <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required>
+              <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required
+                value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
             </label>
             <input type="submit" value="RESET PASSWORD" name="forget-password">
           </form>
@@ -66,7 +67,7 @@ $conn->close();
     <!-- footer -->
     <?php include "../components/footer.php"; ?>
   </div>
-  // Function to hide the alert after 5 seconds
+  // Function to hide the alert after 10 seconds
   <script src="../components/hide-alert.js"></script>
 </body>
 
