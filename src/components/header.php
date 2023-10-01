@@ -1,3 +1,6 @@
+<?php
+session_start();
+?>
 <header class="flex justify-center bg-white sticky top-0 shadow-lg z-20">
   <section class="flex justify-between items-center h-16 w-[85vw]">
     <a href="/" class="flex">
@@ -13,28 +16,75 @@
     </a>
 
     <!-- Desktop Menu (Initially Visible) -->
-    <nav class="hidden md:block">
-      <div class="flex justify-between items-center space-x-4 text-lg text-emerald-700 font-semibold">
+    <section class="flex items-center justify-center text-emerald-700 font-semibold space-x-3">
+      <nav class="hidden md:block mt-2">
+        <div class="flex justify-between items-center space-x-4">
 
-        <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Home</span>
-          <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
-        </a>
+          <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Home</span>
+            <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
+          </a>
 
-        <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Courses</span>
-          <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
-        </a>
+          <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Courses</span>
+            <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
+          </a>
 
-        <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Facilities</span>
-          <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
-        </a>
+          <a href="#" class="group w-fit h-9 overflow-x-hidden"><span
+              class="w-full h-full px-1.5 py-1">Facilities</span>
+            <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
+          </a>
 
-        <a href="#" class="group w-fit h-9 overflow-x-hidden"><span
-            class="w-full h-full px-1.5 py-1">About&nbsp;Us</span>
-          <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
-        </a>
+          <a href="#" class="group w-fit h-9 overflow-x-hidden"><span
+              class="w-full h-full px-1.5 py-1">About&nbsp;Us</span>
+            <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
+          </a>
 
-      </div>
-    </nav>
+        </div>
+      </nav>
+      <?php
+      if (isset($_SESSION['student_id'])) {
+        print '<div class="relative">
+        <label for="profileBtn-toggle" class="label-toggle">
+          <input type="checkbox" id="profileBtn-toggle" hidden>
+          <div
+            class="flex justify-center rounded-full lg:rounded-lg duration-700 hover:bg-emerald-700 hover:text-white cursor-pointer items-center border-2 border-emerald-700 space-x-1 lg:px-1.5 lg:py-1">
+            <div class="w-10 h-10">
+              <img src="./src/src/' . $_SESSION['student_profile_picture'] . '" alt="profile picture"
+                class="w-full h-full rounded-full object-cover object-center" />
+            </div>
+            <span class="hidden lg:block max-w-[11rem] truncate"> ' . $_SESSION['student_full_name'] . '</span>
+          </div>
+        </label>
+        <!-- drop down menu -->
+        <div
+          class="profile-btn absolute -left-14 lg:left-0 p-5 duration-700 bg-white mt-1.5 rounded-b-lg translate-x-[25rem]">
+          <div class="flex flex-col space-y-2 justify-center items-center">
+            <a href="#" class="group w-fit h-9 overflow-x-hidden"><span
+                class="w-full h-full px-1.5 py-1">Dashboard</span>
+              <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
+            </a>
+            <a href="./src/auth/logout.php" class="group w-fit h-9 overflow-x-hidden"><span
+                class="w-full h-full px-1.5 py-1">Log&nbsp;Out</span>
+              <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
+            </a>
+          </div>
+        </div>
+      </div>';
+      } else {
+        print '
+           <a href="./src/auth/login.php"
+        class="flex justify-center rounded-lg items-center border-2 duration-700 hover:bg-emerald-700 hover:text-white border-emerald-700 space-x-1 px-1.5 py-1">
+           <div class="w-8 h-8">
+              <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor"
+                class="w-full h-full">
+                <path stroke-linecap="round" stroke-linejoin="round"
+                  d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
+              </svg>
+            </div>
+            <span>LogIn</span>
+            </a>';
+      }
+      ?>
+    </section>
 
     <!-- Mobile Menu (Initially Hidden) -->
     <nav class="block md:hidden" id="menu-toggle">
@@ -89,11 +139,20 @@ document.addEventListener("DOMContentLoaded", function() {
   const checkboxToggle = document.getElementById("checkbox-toggle");
   const menuToggle = document.getElementById("menu-toggle");
   const mobileMenu = document.querySelector(".mobile-menu");
+  const profileBtn = document.querySelector(".profile-btn");
+  const labelToggle = document.querySelector(".label-toggle");
+  const profileBtnToggle = document.getElementById("profileBtn-toggle");
 
   menuToggle.addEventListener("click", () => {
     mobileMenu.className = checkboxToggle.checked ?
       mobileMenu.className.replace("translate-x-[50rem]", "translate-x-0") :
       mobileMenu.className.replace("translate-x-0", "translate-x-[50rem]");
+  });
+
+  labelToggle.addEventListener("click", () => {
+    profileBtn.className = profileBtnToggle.checked ?
+      profileBtn.className.replace("translate-x-[25rem]", "translate-x-0") :
+      profileBtn.className.replace("translate-x-0", "translate-x-[25rem]");
   });
 });
 </script>
