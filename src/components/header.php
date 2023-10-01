@@ -1,6 +1,3 @@
-<?php
-session_start();
-?>
 <header class="flex justify-center bg-white sticky top-0 shadow-lg z-20">
   <section class="flex justify-between items-center h-16 w-[85vw]">
     <a href="/" class="flex">
@@ -20,25 +17,29 @@ session_start();
       <nav class="hidden md:block mt-2">
         <div class="flex justify-between items-center space-x-4">
 
-          <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Home</span>
+          <a href="/" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Home</span>
             <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
           </a>
 
-          <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Courses</span>
+          <a href="./courses.php" class="group w-fit h-9 overflow-x-hidden"><span
+              class="w-full h-full px-1.5 py-1">Courses</span>
             <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
           </a>
 
-          <a href="#" class="group w-fit h-9 overflow-x-hidden"><span
+          <a href="./facilities.php" class="group w-fit h-9 overflow-x-hidden"><span
               class="w-full h-full px-1.5 py-1">Facilities</span>
             <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
           </a>
 
-          <a href="#" class="group w-fit h-9 overflow-x-hidden"><span
+          <a href="./about.php" class="group w-fit h-9 overflow-x-hidden"><span
               class="w-full h-full px-1.5 py-1">About&nbsp;Us</span>
             <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
           </a>
 
         </div>
+        <!-- TODO: fix breakpoint -->
+        <!-- TODO: fix opacity -->
+        <!-- TODO: change the src to the actual profile picture -->
       </nav>
       <?php
       if (isset($_SESSION['student_id'])) {
@@ -58,7 +59,7 @@ session_start();
         <div
           class="profile-btn absolute -left-14 lg:left-0 p-5 duration-700 bg-white mt-1.5 rounded-b-lg translate-x-[25rem]">
           <div class="flex flex-col space-y-2 justify-center items-center">
-            <a href="#" class="group w-fit h-9 overflow-x-hidden"><span
+            <a href="./dashboard.php" class="group w-fit h-9 overflow-x-hidden"><span
                 class="w-full h-full px-1.5 py-1">Dashboard</span>
               <div class="h-1 w-full bg-emerald-700 duration-500 -translate-x-24 group-hover:translate-x-0"></div>
             </a>
@@ -118,15 +119,18 @@ session_start();
         <div class="h-1 w-full bg-white duration-500 -translate-x-24 group-hover:translate-x-0"></div>
       </a>
 
-      <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Courses</span>
+      <a href="./courses.php" class="group w-fit h-9 overflow-x-hidden"><span
+          class="w-full h-full px-1.5 py-1">Courses</span>
         <div class="h-1 w-full bg-white duration-500 -translate-x-24 group-hover:translate-x-0"></div>
       </a>
 
-      <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">Facilities</span>
+      <a href="./facilities.php" class="group w-fit h-9 overflow-x-hidden"><span
+          class="w-full h-full px-1.5 py-1">Facilities</span>
         <div class="h-1 w-full bg-white duration-500 -translate-x-24 group-hover:translate-x-0"></div>
       </a>
 
-      <a href="#" class="group w-fit h-9 overflow-x-hidden"><span class="w-full h-full px-1.5 py-1">About&nbsp;Us</span>
+      <a href="./about.php" class="group w-fit h-9 overflow-x-hidden"><span
+          class="w-full h-full px-1.5 py-1">About&nbsp;Us</span>
         <div class="h-1 w-full bg-white duration-500 -translate-x-24 group-hover:translate-x-0"></div>
       </a>
     </div>

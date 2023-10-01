@@ -1,6 +1,6 @@
 <!-- Slide -->
 <section class="slide h-[50vh] md:h-[65vh] lg:h-[80vh] w-[80vw] duration-500 rounded-3xl border-2 border-emerald-700"
-  style="background: url('../assets/classroom-1.png') no-repeat center center / cover;">
+  style="background: url('./src/assets/classroom-1.png') no-repeat center center / cover;">
   <div class="relative flex items-center justify-center h-full w-full">
     <button id="prevSlide"
       class="absolute bottom-[40%] left-3 border-2 border-emerald-700 rounded-lg hover:bg-emerald-700 hover:text-white text-emerald-700 duration-700 w-7 h-16">
@@ -30,7 +30,7 @@ document.addEventListener("DOMContentLoaded", function() {
 
   function updateSlide() {
     // Update the slide's properties
-    slide.style.backgroundImage = `url('../assets/classroom-${currentSlideIndex + 1}.png')`;
+    slide.style.backgroundImage = `url('./src/assets/classroom-${currentSlideIndex + 1}.png')`;
   }
 
   function prevSlide() {

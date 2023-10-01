@@ -1,3 +1,9 @@
+<?php 
+session_start();
+if (isset($_SESSION['student_id'])){
+  session_destroy();
+}
+?>
 <!Doctype html>
 <html lang="en">
 
@@ -13,7 +19,7 @@
 
 <body class="bg-bgColor overflow-x-hidden">
   <div class="flex flex-col justify-between min-h-screen">
-    <!-- header -->
+    <!-- TODO: header -->
     <!-- main -->
     <main class="flip">
       <section class="background-image background-image2">
@@ -75,7 +81,7 @@
               $_SESSION['student_full_name'] = $row['full_name'];
               $_SESSION['student_profile_picture'] = $row['profile_picture'];
               // Redirect to the dashboard or another page after successful login
-              header('Location: ./dashboard.php');
+              header('Location: ../../dashboard.php');
               exit();
             } else {
               // Display an error message if the password is incorrect
