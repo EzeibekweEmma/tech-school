@@ -16,6 +16,18 @@ session_start();
   <div class="flex flex-col justify-between min-h-screen">
     <!-- header -->
     <?php include "./src/components/header.php"; ?>
+    <!-- alert message -->
+    <section class="fixed top-20 left-2 z-30">
+      <?php
+      if (isset($_SESSION['logout-successful'])) {
+        echo '<div id="alertMessage" class="flex items-center py-2 bg-green-600/70 w-[94vw] lg:w-[97vw] space-x-2 px-5 text-white rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <span>Log Out Successful</span>
+                    </div>';
+      }
+      unset($_SESSION['logout-successful']);
+      ?>
+    </section>
     <!-- hero -->
     <?php include "./src/components/hero.php"; ?>
     <!-- main -->
@@ -121,6 +133,8 @@ session_start();
     <!-- footer -->
     <?php include "./src/components/footer.php"; ?>
   </div>
+  <!-- Function to hide the alert after 10 seconds -->
+  <script src="./src/components/hide-alert.js"></script>
 </body>
 
 </html>

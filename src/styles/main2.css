@@ -25,7 +25,7 @@
   }
   .auth-container {
     background-color: #fff;
-    box-shadow: none;
+    box-shadow: 2px 2px 5px rgba(0, 0, 0, 0.566);
   }
   .auth-container:hover {
     background: none;

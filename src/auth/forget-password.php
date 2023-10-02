@@ -51,6 +51,7 @@ $conn->close();
             <input type="submit" value="RESET PASSWORD" name="forget-password">
           </form>
         </section>
+        <!-- alert message -->
         <section class="absolute top-2 left-1">
           <?php
           if (isset($error)) {
@@ -66,7 +67,7 @@ $conn->close();
     <!-- footer -->
     <?php include "../components/footer.php"; ?>
   </div>
-  // Function to hide the alert after 10 seconds
+  <!-- Function to hide the alert after 10 seconds -->
   <script src="../components/hide-alert.js"></script>
 </body>
 

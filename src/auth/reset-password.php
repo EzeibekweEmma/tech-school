@@ -21,6 +21,8 @@ if (isset($_POST["set-password"])) {
     $updateQuery = "UPDATE students SET password = '$hashedPassword' WHERE id = '$userId'";
 
     if ($conn->query($updateQuery) === TRUE) {
+      session_start();
+      $_SESSION['reset-successful'] = 'reset-successful';
       header('Location: ./login.php');
       exit();
     } else {
@@ -55,14 +57,18 @@ $conn->close();
           <img src="../assets/favicon.svg" alt="logo" class="logo" />
           <form class="auth-form" method="POST" action="">
             <label for="password"><span>Password:</span>
-              <input type="password" id="password" name="password" placeholder="Enter Your Password" minlength="8" required>
+              <input type="password" id="password" name="password" placeholder="Enter Your Password" minlength="8"
+                required>
             </label>
             <label for="confirmPassword"><span>Confirm Password:</span>
-              <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" placeholder="Confirm Your Password" required>
+              <input type="password" id="confirmPassword" name="confirmPassword" minlength="8"
+                placeholder="Confirm Your Password" required>
             </label>
             <input type="submit" value="SET PASSWORD" name="set-password">
           </form>
         </section>
+
+        <!-- alert message -->
         <section class="absolute top-2 left-1">
           <?php
           if (isset($error)) {
@@ -78,7 +84,7 @@ $conn->close();
     <!-- footer -->
     <?php include "../components/footer.php"; ?>
   </div>
-  // Function to hide the alert after 10 seconds
+  <!-- Function to hide the alert after 10 seconds -->
   <script src="../components/hide-alert.js"></script>
 </body>
 

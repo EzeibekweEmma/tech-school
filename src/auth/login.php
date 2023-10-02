@@ -1,7 +1,5 @@
 <?php
 session_start();
-session_destroy();
-
 
 include "./config-db.php";
 
@@ -28,6 +26,7 @@ if (isset($_COOKIE["remember_user"])) {
         $_SESSION['student_id'] = $row['id'];
         $_SESSION['student_full_name'] = $row['full_name'];
         $_SESSION['student_profile_picture'] = $row['profile_picture'];
+        $_SESSION['login-successful'] = 'login-successful';
 
         header('Location: ../../dashboard.php');
         exit();
@@ -59,6 +58,7 @@ if (isset($_POST["login"])) {
       $_SESSION['student_id'] = $row['id'];
       $_SESSION['student_full_name'] = $row['full_name'];
       $_SESSION['student_profile_picture'] = $row['profile_picture'];
+      $_SESSION['login-successful'] = 'login-successful';
 
       // setting a cookie with the user's credentials if the "Remember Me" checkbox is checked
       if ($rememberMe) {
@@ -111,12 +111,10 @@ $conn->close();
         <img src="../assets/favicon.svg" alt="logo" class="logo" />
         <form class="auth-form" method="POST" action="login.php">
           <label for="email"><span>Email:</span>
-            <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required
-              value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
+            <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
           </label>
           <label for="password"><span>Password:</span>
-            <input type="password" id="password" name="password" placeholder="Enter Your Password" minlength="8"
-              required>
+            <input type="password" id="password" name="password" placeholder="Enter Your Password" minlength="8" required>
           </label>
           <div class="remember-me">
             <label for="remember-me">
@@ -130,7 +128,7 @@ $conn->close();
         </form>
       </section>
 
-      <!-- PHP code to handle login form submission -->
+      <!-- alert message -->
       <section class="absolute top-2 left-1">
         <?php
         if (isset($error)) {
@@ -139,13 +137,25 @@ $conn->close();
                       <span>' . $error . '</span>
                   </div>';
         }
+        if (isset($_SESSION['reset-successful'])) {
+          echo '<div id="alertMessage" class="flex items-center py-2 bg-green-600/70 w-[96vw] space-x-2 px-5 text-white rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <span>Password Reset Successful</span>
+                  </div>';
+        } else if (isset($_SESSION['signup-successful'])) {
+          echo '<div id="alertMessage" class="flex items-center py-2 bg-green-600/70 w-[96vw] space-x-2 px-5 text-white rounded-lg">
+                      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
+                      <span>Registration Successful</span>
+                  </div>';
+        }
+        session_destroy();
         ?>
       </section>
     </main>
     <!-- footer -->
     <?php include "../components/footer.php"; ?>
   </div>
-  // Function to hide the alert after 10 seconds
+  <!-- Function to hide the alert after 10 seconds -->
   <script src="../components/hide-alert.js"></script>
 </body>
 

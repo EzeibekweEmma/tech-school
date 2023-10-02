@@ -31,6 +31,8 @@ if (isset($_POST["signup"])) {
                                     VALUES ('$fullName', '$email', '$phone', '$targetFile', '$password')";
 
       if ($conn->query($sql) === TRUE) {
+        session_start();
+        $_SESSION['signup-successful'] = 'signup-successful';
         header('Location: ./login.php');
         exit();
       } else {
@@ -61,7 +63,7 @@ $conn->close();
     <?php include "../components/auth-header.php";
     ?>
     <!-- main -->
-    <main>
+    <main class="break-point">
       <section class="background-image">
         <div class="background-blur">
           <h1>Hello Friend 👋</h1>
@@ -73,28 +75,33 @@ $conn->close();
         <img src="../assets/favicon.svg" alt="logo" class="logo" />
         <form class="auth-form" method="POST" action="" enctype="multipart/form-data">
           <label for="fullName"><span>Full Name:</span>
-            <input type="text" id="fullName" name="fullName" placeholder="Eg: First-name Last-name" required value="<?php echo isset($_POST['fullName']) ? htmlspecialchars($_POST['fullName']) : ''; ?>">
+            <input type="text" id="fullName" name="fullName" placeholder="Eg: First-name Last-name" required
+              value="<?php echo isset($_POST['fullName']) ? htmlspecialchars($_POST['fullName']) : ''; ?>">
           </label>
           <label for="email"><span>Email:</span>
-            <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
+            <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required
+              value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
           </label>
           <label for="phone"><span>Phone Number:</span>
-            <input type="tel" id="phone" name="phone" placeholder="Eg: +1234567890" pattern="[+]{1}[0-9]*" required value="<?php echo isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : ''; ?>">
+            <input type="tel" id="phone" name="phone" placeholder="Eg: +1234567890" pattern="[+]{1}[0-9]*" required
+              value="<?php echo isset($_POST['phone']) ? htmlspecialchars($_POST['phone']) : ''; ?>">
           </label>
           <label for="profile"><span>Profile Picture:</span>
             <input type="file" id="profile" name="profile" accept=".png, .jpg, .jpeg" />
           </label>
           <label for="password"><span>Password:</span>
-            <input type="password" id="password" name="password" placeholder="Enter Your Password" minlength="8" required>
+            <input type="password" id="password" name="password" placeholder="Enter Your Password" minlength="8"
+              required>
           </label>
           <label for="confirmPassword"><span>Confirm Password:</span>
-            <input type="password" id="confirmPassword" name="confirmPassword" minlength="8" placeholder="Confirm Your Password" required>
+            <input type="password" id="confirmPassword" name="confirmPassword" minlength="8"
+              placeholder="Confirm Your Password" required>
           </label>
           <input type="submit" value="SIGN UP" name="signup">
           <span>Already have an account? <a class="quick-link" href="./login.php">logIn here!</a></span>
         </form>
       </section>
-      <!-- PHP code to handle sign-up form submission -->
+      <!-- alert message -->
       <section class="absolute top-2 left-1">
         <?php
         if (isset($error)) {
@@ -109,7 +116,7 @@ $conn->close();
     <!-- footer -->
     <?php include "../components/footer.php"; ?>
   </div>
-  // Function to hide the alert after 10 seconds
+  <!-- Function to hide the alert after 10 seconds -->
   <script src="../components/hide-alert.js"></script>
 </body>
 

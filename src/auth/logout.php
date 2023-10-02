@@ -7,5 +7,7 @@ if (isset($_COOKIE["remember_user"])) {
 }
 
 session_destroy();
+session_start();
+$_SESSION['logout-successful'] = 'logout-successful';
 header('Location: /');
 exit();
