@@ -25,7 +25,7 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg" href="./src/assets/favicon.svg" />
-  <link href="./dist/output.css" rel="stylesheet" />
+  <link href="./src/styles/output.css" rel="stylesheet" />
   <title>Tech School | Courses Page</title>
 </head>
 

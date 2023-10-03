@@ -8,7 +8,7 @@ session_start();
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <link rel="icon" type="image/svg" href="./src/assets/favicon.svg" />
-  <link href="./dist/output.css" rel="stylesheet" />
+  <link href="./src/styles/output.css" rel="stylesheet" />
   <title>Tech School</title>
 </head>
 
@@ -17,17 +17,7 @@ session_start();
     <!-- header -->
     <?php include "./src/components/header.php"; ?>
     <!-- alert message -->
-    <section class="fixed top-20 left-2 z-30">
-      <?php
-      if (isset($_SESSION['logout-successful'])) {
-        echo '<div id="alertMessage" class="flex items-center py-2 bg-green-600/70 w-[94vw] lg:w-[97vw] space-x-2 px-5 text-white rounded-lg">
-                      <svg xmlns="http://www.w3.org/2000/svg" class="stroke-current shrink-0 h-6 w-6" fill="none" viewBox="0 0 24 24"><path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M9 12l2 2 4-4m6 2a9 9 0 11-18 0 9 9 0 0118 0z" /></svg>
-                      <span>Log Out Successful</span>
-                    </div>';
-      }
-      unset($_SESSION['logout-successful']);
-      ?>
-    </section>
+    <?php include "./src/components/alert-message.php"; ?>
     <!-- hero -->
     <?php include "./src/components/hero.php"; ?>
     <!-- main -->
@@ -36,8 +26,7 @@ session_start();
         <section class="my-16">
           <h2 class="text-center mb-5 text-xl sm:text-3xl md:text-4xl font-bold text-emerald-700">Claim Your Place
             in the New Global Digital Workforce</h2>
-          <p class="text-center mb-5 text-base sm:text-lg md:text-xl font-medium">At <span
-              class="text-emerald-700">Tech</span> School,
+          <p class="text-center mb-5 text-base sm:text-lg md:text-xl font-medium">At <span class="text-emerald-700">Tech</span> School,
             our programmes are designed to prepare you for a career in the world's fastest growing industries.</p>
 
           <section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
@@ -50,14 +39,12 @@ session_start();
                   iusto ipsam doloremque. </p>
                 <p class="text-gray-700 block md:hidden text-xs mb-3">Lorem ipsum dolor sit amet consectetur adipisicing
                   elit.</p>
-                <a href="#"
-                  class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
+                <a href="#" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
                   More</a>
               </div>
             </div>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img class="w-full h-48 object-cover" src="./src/assets/software-engineering.png"
-                alt="Software Engineering">
+              <img class="w-full h-48 object-cover" src="./src/assets/software-engineering.png" alt="Software Engineering">
               <div class="p-6">
                 <h3 class="text:base sm:text-lg font-bold text-emerald-700 mb-2">Software Engineering</h3>
                 <p class="text-gray-700 hidden md:block text-base mb-3">Lorem ipsum dolor sit amet consectetur
@@ -65,8 +52,7 @@ session_start();
                   iusto ipsam doloremque. </p>
                 <p class="text-gray-700 block md:hidden text-xs mb-3">Lorem ipsum dolor sit amet consectetur adipisicing
                   elit.</p>
-                <a href="#"
-                  class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
+                <a href="#" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
                   More</a>
               </div>
             </div>
@@ -79,14 +65,12 @@ session_start();
                   iusto ipsam doloremque. </p>
                 <p class="text-gray-700 block md:hidden text-xs mb-3">Lorem ipsum dolor sit amet consectetur adipisicing
                   elit.</p>
-                <a href="#"
-                  class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
+                <a href="#" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
                   More</a>
               </div>
             </div>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img class="w-full h-48 object-cover" src="./src/assets/artificial-intelligence.png"
-                alt="Artificial Intelligence">
+              <img class="w-full h-48 object-cover" src="./src/assets/artificial-intelligence.png" alt="Artificial Intelligence">
               <div class="p-6">
                 <h3 class="text:base sm:text-lg font-bold text-emerald-700 mb-2">Artificial Intelligence</h3>
                 <p class="text-gray-700 hidden md:block text-base mb-3">Lorem ipsum dolor sit amet consectetur
@@ -94,8 +78,7 @@ session_start();
                   iusto ipsam doloremque. </p>
                 <p class="text-gray-700 block md:hidden text-xs mb-3">Lorem ipsum dolor sit amet consectetur adipisicing
                   elit.</p>
-                <a href="#"
-                  class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
+                <a href="#" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
                   More</a>
               </div>
             </div>

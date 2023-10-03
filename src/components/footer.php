@@ -1,3 +1,27 @@
+<?php
+// include "./src/auth/config-db.php";
+
+// if (isset($_POST["subscribe"])) {
+//   $email = trim($_POST["email"]);
+//   $error = '';
+
+//   $checkEmailQuery = "SELECT * FROM newsletter WHERE email = '$email'";
+//   $result = $conn->query($checkEmailQuery);
+
+//   if ($result->num_rows > 0) {
+//     $error = $email . ' already subscribe to our Newsletter.';
+//   } else {
+//       $sql = "INSERT INTO newsletter (email) VALUES ('$email')";
+
+//       if ($conn->query($sql) === TRUE) {
+//       $error = $email . ' subscribe successfully.';
+//         exit();
+//       } else {
+//         $error = ' $sql . <br> . $conn->error';
+//       }}
+// }
+?>
+
 <footer class="flex justify-center bg-white shadow-lg p-10 border-t-2 border-gray-400">
   <section class="footer text-base-content w-[85vw]">
 
@@ -136,16 +160,19 @@
       <a class="link link-hover">Jobs</a>
       <a class="link link-hover">Press kit</a>
     </nav>
-    <form>
+    <!-- TODO: fix alert message -->
+    <form method="POST" action="">
       <header class="text-emerald-700 text-sm font-bold uppercase">Newsletter</header>
       <fieldset class="form-control w-80">
         <label class="label">
           <span class="label-text">Enter your email address</span>
         </label>
         <div class="relative">
-          <input type="email" required placeholder="username@site.com" class="input input-bordered w-full pr-16" />
+          <input type="email" name="email" required placeholder="username@site.com"
+            class="input input-bordered w-full pr-16" />
           <button
-            class="btn bg-emerald-700 hover:bg-emerald-800 duration-500 focus:scale-90 text-white absolute top-0 right-0 rounded-l-none">Subscribe</button>
+            class="btn bg-emerald-700 hover:bg-emerald-800 duration-500 focus:scale-90 text-white absolute top-0 right-0 rounded-l-none"
+            name="subscribe">Subscribe</button>
         </div>
       </fieldset>
     </form>
