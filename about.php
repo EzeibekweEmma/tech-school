@@ -1,6 +1,46 @@
 <?php
 session_start();
+
+use PHPMailer\PHPMailer\PHPMailer;
+use PHPMailer\PHPMailer\Exception;
+
+require './vendor/phpmailer/phpmailer/src/Exception.php';
+require './vendor/phpmailer/phpmailer/src/PHPMailer.php';
+require './vendor/phpmailer/phpmailer/src/SMTP.php';
+
+if (isset($_POST['send'])) {
+  $name = htmlentities($_POST['name']);
+  $email = htmlentities($_POST['email']);
+  $subject = htmlentities($_POST['subject']);
+  $message = htmlentities($_POST['message']);
+
+  $env = parse_ini_file('.env');
+
+  try {
+    $mail = new PHPMailer(true);
+    $mail->isSMTP();
+    $mail->Host = 'smtp.gmail.com';
+    $mail->SMTPAuth = true;
+    $mail->Username = $env['MAIN_EMAIL'];
+    $mail->Password = $env['PASSWORD'];
+    $mail->Port = 587;
+    $mail->SMTPSecure = 'tls';
+    $mail->isHTML(true);
+    $mail->setFrom($email, $name);
+    $mail->addAddress($env['RECEIVER_EMAIL']);
+    $mail->Subject = "$email ($subject)";
+    $mail->Body = $message;
+    $mail->send();
+
+    $_SESSION['email-successful'] = 'email-successful';
+    header('Location: ./index.php');
+    exit();
+  } catch (Exception $e) {
+    $error = "Email could not be sent. Mailer Error: {$mail->ErrorInfo}";
+  }
+}
 ?>
+
 <!doctype html>
 <html lang="en">
 
@@ -50,7 +90,6 @@ session_start();
           </p>
           <section class="flex flex-col items-center justify-center">
             <h2 class="text-center mb-3 text-xl sm:text-3xl md:text-4xl font-bold text-emerald-700">Contant Us</h2>
-            <!-- TODO: implement form submission -->
             <form action="" method="post">
               <div class="flex flex-col items-center justify-center border p-6 sm:p-20 rounded-2xl shadow-xl">
                 <div class="flex flex-col items-center justify-center">
