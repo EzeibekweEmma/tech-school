@@ -38,7 +38,6 @@
             </a>
 
           </div>
-          <!-- TODO: change the src to the actual profile picture -->
         </nav>
         <?php
         if (isset($_SESSION['student_id'])) {
@@ -52,7 +51,7 @@
                 class="w-full h-full">
                 <path stroke-linecap="round" stroke-linejoin="round"
                   d="M17.982 18.725A7.488 7.488 0 0012 15.75a7.488 7.488 0 00-5.982 2.975m11.963 0a9 9 0 10-11.963 0m11.963 0A8.966 8.966 0 0112 21a8.966 8.966 0 01-5.982-2.275M15 9.75a3 3 0 11-6 0 3 3 0 016 0z" />
-              </svg>' : ' <img src="./src/src/' . $_SESSION['student_profile_picture'] . '" alt="profile picture"
+              </svg>' : ' <img src="' . $_SESSION['student_profile_picture'] . '" alt="profile picture"
                 class="w-full h-full rounded-full object-cover object-center" />';
           print '</div>
             <span class="hidden lg:block max-w-[11rem] capitalize truncate"> ' . $_SESSION['student_full_name'] . '</span>
@@ -60,7 +59,7 @@
         </label>
         <!-- drop down menu -->
         <div
-          class="profile-btn absolute -left-14 lg:left-0 p-5 duration-700 bg-white mt-1.5 rounded-b-lg translate-x-[25rem]">
+          class="profile-btn absolute -left-14 lg:left-0 p-5 duration-500 bg-white mt-1.5 rounded-b-lg translate-x-[25rem]">
           <div class="flex flex-col space-y-2 justify-center items-center">
             <a href="./dashboard.php" class="group w-fit h-9 overflow-x-hidden"><span
                 class="w-full h-full px-1.5 py-1">Dashboard</span>

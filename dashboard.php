@@ -2,24 +2,23 @@
 include './src/auth/config-db.php';
 session_start();
 $student_id = $_SESSION['student_id'];
-
 if (!isset($student_id)) {
   header('Location: ./src/auth/login.php');
   exit();
 }
 
-$sql = "SELECT * FROM students WHERE id = $student_id";
+$sql = "SELECT * FROM students WHERE id = '$student_id'";
 
 $result = $conn->query($sql);
 
 if ($result->num_rows === 1) {
   $student = $result->fetch_assoc();
 
-  // Access user data
   $full_name = $student['full_name'];
   $email = $student['email'];
   $phone = $student['phone'];
   $profile_picture = $student['profile_picture'];
+  $background_img = $student['background_img'];
 }
 
 $conn->close();
@@ -69,13 +68,12 @@ $conn->close();
                   <path stroke-linecap="round" stroke-linejoin="round" d="M15.75 6a3.75 3.75 0 11-7.5 0 3.75 3.75 0 017.5 0zM4.501 20.118a7.5 7.5 0 0114.998 0A17.933 17.933 0 0112 21.75c-2.676 0-5.216-.584-7.499-1.632z" />
                 </svg>';
             } else {
-              // TODO: fix the image path
-              echo '<img src="../src/src/' . $_SESSION['student_profile_picture'] . '" alt="profile picture" class="w-full h-full rounded-full object-cover object-center" />';
+              echo '<img src="' . $_SESSION['student_profile_picture'] . '" alt="profile picture" class="w-full h-full rounded-full object-cover object-center" />';
             }
             ?>
           </div>
           <div class="flex flex-col mb-1 md:mb-3">
-            <span class="text-2xl md:text-4xl font-bold mb-1 md:mb-3">
+            <span class="text-2xl md:text-4xl capitalize font-bold mb-1 md:mb-3">
               <?php echo $full_name ?>
             </span>
             <span class="text-base font-medium"><?php echo $email ?></span>
