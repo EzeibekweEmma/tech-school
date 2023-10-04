@@ -44,10 +44,17 @@ $conn->close();
     <?php include "./src/components/alert-message.php"; ?>
     <!-- hero -->
     <div class="bg-emerald-700 h-60 w-full relative">
+      <?php
+      if (!empty($background_img)) {
+        echo '<div class="w-full h-full" style=" background: url(' . $background_img . ');
+      background-position: center; background-repeat: no-repeat; background-size: cover;">
+    </div>
+    ';
+      }
+      ?>
       <div class="flex flex-col items-center justify-center h-full">
-        <h1 class="text-white text-3xl md:text-5xl font-bold">Dashboard</h1>
+        <h1 class="text-white/70 text-3xl md:text-5xl font-bold">Dashboard</h1>
       </div>
-
       <div class="absolute bottom-2 right-2">
         <a href="./edit-dashboard.php" class="bg-white hover:bg-white/70 hover:rotate-[360deg] duration-700 text-emerald-700 p-2 rounded-full font-medium flex items-center">
           <svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5" stroke="currentColor" class="w-6 h-6">
