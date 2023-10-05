@@ -1,25 +1,25 @@
 <?php
-// include "./src/auth/config-db.php";
+include "./src/auth/config-db.php";
 
-// if (isset($_POST["subscribe"])) {
-//   $email = trim($_POST["email"]);
-//   $error = '';
+if (isset($_POST["subscribe"])) {
+  $email = trim($_POST["email"]);
+  $error = '';
 
-//   $checkEmailQuery = "SELECT * FROM newsletter WHERE email = '$email'";
-//   $result = $conn->query($checkEmailQuery);
+  $checkEmailQuery = "SELECT * FROM newsletter WHERE email = '$email'";
+  $result = $conn->query($checkEmailQuery);
 
-//   if ($result->num_rows > 0) {
-//     $error = $email . ' already subscribe to our Newsletter.';
-//   } else {
-//       $sql = "INSERT INTO newsletter (email) VALUES ('$email')";
+  if ($result->num_rows > 0) {
+    $subscribe_already = "true";
+  } else {
+      $sql = "INSERT INTO newsletter (email) VALUES ('$email')";
 
-//       if ($conn->query($sql) === TRUE) {
-//       $error = $email . ' subscribe successfully.';
-//         exit();
-//       } else {
-//         $error = ' $sql . <br> . $conn->error';
-//       }}
-// }
+      if ($conn->query($sql) === TRUE) {
+      $subscribe_successful = "true";
+        exit();
+      } else {
+        $error = $sql .' <br> '. $conn->error;
+      }}
+}
 ?>
 
 <footer class="flex justify-center bg-white shadow-lg p-10 border-t-2 border-gray-400">
@@ -33,12 +33,12 @@
       </svg>
       <p>Tech School Ltd &copy; 2023.<br />Providing reliable tech since 1992</p>
       <!-- Social media icons -->
-      <div class="flex justify-between items-center w-full">
+      <div class="flex justify-between items-center w-full -ml-1">
         <!-- Gmail -->
         <a href="mailto:ezeibekweemma@gmail.com">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="40px" height="40px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z"
               fill="white" />
@@ -65,7 +65,7 @@
         <a href="https://twitter.com/EzeibekweEmma" target="_blank">
           <?xml version="1.0" encoding="UTF-8" standalone="no"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="30px" height="40px" viewBox="0 -4 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          <svg width="20px" height="30px" viewBox="0 -4 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
 
             <title>Twitter-color</title>
@@ -88,7 +88,7 @@
         <a href="https://instagram.com/EzeibekweEmma" target="_blank">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="32px" height="32px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="22px" height="22px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)" />
             <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)" />
             <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)" />
@@ -128,7 +128,7 @@
         <a href="https://linkedIn.com/in/EzeibekweEmma" target="_blank">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="35px" height="35px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <svg width="25px" height="25px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
             <path fill="#0A66C2"
               d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z" />
           </svg>
@@ -137,7 +137,7 @@
         <a href="https://facebook.com/EzeibekweEmma" target="_blank">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="35px" height="40px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <svg width="25px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
             <path fill="#1877F2"
               d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z" />
             <path fill="#ffffff"
