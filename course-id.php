@@ -1,7 +1,6 @@
   <?php
   session_start();
   if (!isset($_SESSION['student_id'])) {
-    // TODO: set path to login page
     header('Location: ./src/auth/login.php');
     exit();
   }

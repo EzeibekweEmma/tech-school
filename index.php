@@ -31,54 +31,62 @@ session_start();
 
           <section class="grid grid-cols-2 lg:grid-cols-4 gap-4">
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img class="w-full h-48 object-cover" src="./src/assets/machine-learning.png" alt="Machine Learning">
+              <a href="./course-id.php?id=34337"><img class="w-full h-48 object-cover" src="./src/assets/machine-learning.png" alt="Machine Learning"></a>
               <div class="p-6">
-                <h3 class="text:base sm:text-lg font-bold text-emerald-700 mb-2">Machine Learning</h3>
+                <a href="./course-id.php?id=34337">
+                  <h3 class="text:base sm:text-lg font-bold text-emerald-700 mb-2">Machine Learning</h3>
+                </a>
                 <p class="text-gray-700 hidden md:block text-base mb-3">Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Quisquam voluptatum voluptatibus, quod, quae, quia quibusdam dolorum autem nemo
                   iusto ipsam doloremque. </p>
                 <p class="text-gray-700 block md:hidden text-xs mb-3">Lorem ipsum dolor sit amet consectetur adipisicing
                   elit.</p>
-                <a href="#" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
+                <a href="./course-id.php?id=34337" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
                   More</a>
               </div>
             </div>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img class="w-full h-48 object-cover" src="./src/assets/software-engineering.png" alt="Software Engineering">
+              <a href="./course-id.php?id=21076"><img class="w-full h-48 object-cover" src="./src/assets/software-engineering.png" alt="Software Engineering"></a>
               <div class="p-6">
-                <h3 class="text:base sm:text-lg font-bold text-emerald-700 mb-2">Software Engineering</h3>
+                <a href="./course-id.php?id=21076">
+                  <h3 class="text:base sm:text-lg font-bold text-emerald-700 mb-2">Software Engineering</h3>
+                </a>
                 <p class="text-gray-700 hidden md:block text-base mb-3">Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Quisquam voluptatum voluptatibus, quod, quae, quia quibusdam dolorum autem nemo
                   iusto ipsam doloremque. </p>
                 <p class="text-gray-700 block md:hidden text-xs mb-3">Lorem ipsum dolor sit amet consectetur adipisicing
                   elit.</p>
-                <a href="#" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
+                <a href="./course-id.php?id=21076" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
                   More</a>
               </div>
             </div>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img class="w-full h-48 object-cover" src="./src/assets/data-analytics.png" alt="Data Analytics">
+              <a href="./course-id.php?id=27845"><img class="w-full h-48 object-cover" src="./src/assets/data-analytics.png" alt="Data Analytics"></a>
               <div class="p-6">
-                <h3 class="text:base sm:text-lg font-bold text-emerald-700 mb-2">Data Analytics</h3>
+                <a href="./course-id.php?id=27845">
+                  <h3 class="text:base sm:text-lg font-bold text-emerald-700 mb-2">Data Analytics</h3>
+                </a>
                 <p class="text-gray-700 hidden md:block text-base mb-3">Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Quisquam voluptatum voluptatibus, quod, quae, quia quibusdam dolorum autem nemo
                   iusto ipsam doloremque. </p>
                 <p class="text-gray-700 block md:hidden text-xs mb-3">Lorem ipsum dolor sit amet consectetur adipisicing
                   elit.</p>
-                <a href="#" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
+                <a href="./course-id.php?id=27845" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
                   More</a>
               </div>
             </div>
             <div class="bg-white rounded-lg shadow-lg overflow-hidden">
-              <img class="w-full h-48 object-cover" src="./src/assets/artificial-intelligence.png" alt="Artificial Intelligence">
+              <a href="./course-id.php?id=12354"><img class="w-full h-48 object-cover" src="./src/assets/artificial-intelligence.png" alt="Artificial Intelligence"></a>
               <div class="p-6">
-                <h3 class="text:base sm:text-lg font-bold text-emerald-700 mb-2">Artificial Intelligence</h3>
+                <a href="./course-id.php?id=12354">
+                  <h3 class="text:base sm:text-lg font-bold text-emerald-700 mb-2">Artificial Intelligence</h3>
+                </a>
                 <p class="text-gray-700 hidden md:block text-base mb-3">Lorem ipsum dolor sit amet consectetur
                   adipisicing elit. Quisquam voluptatum voluptatibus, quod, quae, quia quibusdam dolorum autem nemo
                   iusto ipsam doloremque. </p>
                 <p class="text-gray-700 block md:hidden text-xs mb-3">Lorem ipsum dolor sit amet consectetur adipisicing
                   elit.</p>
-                <a href="#" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
+                <a href="./course-id.php?id=12354" class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
                   More</a>
               </div>
             </div>

@@ -1,7 +1,7 @@
 [
   {
     "id": 80146,
-    "image": "../assets/software-engineering.png",
+    "image": "./src/assets/operator.png",
     "course": "Web Development Bootcamp",
     "description": "Learn the essentials of web development from scratch.",
     "price": 199.99,
@@ -22,7 +22,7 @@
   },
   {
     "id": 22091,
-    "image": "course2.jpg",
+    "image": "./src/assets/machine-learning.png",
     "course": "Data Science Masterclass",
     "description": "Dive into data science and machine learning with hands-on projects.",
     "price": 249.99,
@@ -43,7 +43,7 @@
   },
   {
     "id": 54143,
-    "image": "course3.jpg",
+    "image": "./src/assets/courses-banner.png",
     "course": "Cybersecurity Fundamentals",
     "description": "Learn how to protect computer systems and networks from cyber threats.",
     "price": 149.99,
@@ -63,7 +63,7 @@
   },
   {
     "id": 12354,
-    "image": "course4.jpg",
+    "image": "./src/assets/artificial-intelligence.png",
     "course": "Artificial Intelligence Fundamentals",
     "description": "Explore the world of artificial intelligence and its applications.",
     "price": 199.99,
@@ -84,7 +84,7 @@
   },
   {
     "id": 27845,
-    "image": "course5.jpg",
+    "image": "./src/assets/data-analytics.png",
     "course": "Data Analytics for Business",
     "description": "Learn data analytics techniques to drive business decisions.",
     "price": 179.99,
@@ -104,7 +104,7 @@
   },
   {
     "id": 21076,
-    "image": "course6.jpg",
+    "image": "./src/assets/software-engineering.png",
     "course": "Software Engineering Principles",
     "description": "Master the principles of software engineering and design.",
     "price": 199.99,
@@ -124,7 +124,7 @@
   },
   {
     "id": 34337,
-    "image": "course7.jpg",
+    "image": "./src/assets/machine-learning.png",
     "course": "Machine Learning Foundations",
     "description": "Build a strong foundation in machine learning concepts and algorithms.",
     "price": 219.99,
@@ -144,7 +144,7 @@
   },
   {
     "id": 12318,
-    "image": "course8.jpg",
+    "image": "./src/assets/classroom2.png",
     "course": "UX/UI Design Essentials",
     "description": "Learn the essentials of user experience (UX) and user interface (UI) design.",
     "price": 159.99,
@@ -164,7 +164,7 @@
   },
   {
     "id": 11229,
-    "image": "course9.jpg",
+    "image": "./src/assets/operator.png",
     "course": "Computer Programming Fundamentals",
     "description": "Learn the fundamentals of computer programming and coding.",
     "price": 149.99,
@@ -184,7 +184,7 @@
   },
   {
     "id": 72210,
-    "image": "course10.jpg",
+    "image": "./src/assets/software-engineering.png",
     "course": "Computer Graphics and Design",
     "description": "Explore the world of computer graphics and digital design.",
     "price": 179.99,
@@ -204,7 +204,7 @@
   },
   {
     "id": 51091,
-    "image": "course11.jpg",
+    "image": "./src/assets/artificial-intelligence.png",
     "course": "Introduction to Python Programming",
     "description": "Get started with Python, one of the most popular programming languages.",
     "price": 99.99,
@@ -224,7 +224,7 @@
   },
   {
     "id": 69012,
-    "image": "course12.jpg",
+    "image": "./src/assets/software-engineering.png",
     "course": "Advanced Python Programming",
     "description": "Take your Python skills to the next level with advanced topics and projects.",
     "price": 129.99,
@@ -243,7 +243,7 @@
   },
   {
     "id": 88003,
-    "image": "course13.jpg",
+    "image": "./src/assets/data-analytics.png",
     "course": "Data Structures and Algorithms",
     "description": "Master data structures and algorithms for efficient programming.",
     "price": 199.99,
@@ -263,7 +263,7 @@
   },
   {
     "id": 66446,
-    "image": "course14.jpg",
+    "image": "./src/assets/courses-banner.png",
     "course": "Computer Networking Essentials",
     "description": "Learn the fundamentals of computer networking and network administration.",
     "price": 169.99,
@@ -283,7 +283,7 @@
   },
   {
     "id": 19459,
-    "image": "course15.jpg",
+    "image": "./src/assets/machine-learning.png",
     "course": "Computer Simulation and Modeling",
     "description": "Explore the world of computer simulation and modeling for various applications.",
     "price": 189.99,
@@ -303,7 +303,7 @@
   },
   {
     "id": 65657,
-    "image": "course16.jpg",
+    "image": "./src/assets/operator.png",
     "course": "Web Design Technology",
     "description": "Learn the latest web design technologies and trends for modern websites.",
     "price": 159.99,
@@ -323,7 +323,7 @@
   },
   {
     "id": 13276,
-    "image": "course16.jpg",
+    "image": "./src/assets/software-engineering.png",
     "course": "Navigation Technology for GPS and GIS",
     "description": "Explore navigation technology and its applications in GPS and GIS systems.",
     "price": 149.99,
@@ -343,7 +343,7 @@
   },
   {
     "id": 94308,
-    "image": "course16.jpg",
+    "image": "./src/assets/artificial-intelligence.png",
     "course": "Information Technology Management",
     "description": "Learn IT management strategies and best practices for organizations.",
     "price": 179.99,
@@ -363,7 +363,7 @@
   },
   {
     "id": 10659,
-    "image": "course16.jpg",
+    "image": "./src/assets/courses-banner.png",
     "course": "Marine Technology and Ocean Engineering",
     "description": "Explore marine technology and engineering for ocean exploration and conservation.",
     "price": 199.99,
@@ -383,7 +383,7 @@
   },
   {
     "id": 23258,
-    "image": "course16.jpg",
+    "image": "./src/assets/artificial-intelligence.png",
     "course": "Robotics and Automation",
     "description": "Delve into the world of robotics and automation for industrial and AI applications.",
     "price": 219.99,
@@ -403,7 +403,7 @@
   },
   {
     "id": 56241,
-    "image": "course16.jpg",
+    "image": "./src/assets/data-analytics.png",
     "course": "Advanced Data Science and Big Data Analytics",
     "description": "Master advanced data science techniques and work with big data.",
     "price": 239.99,
@@ -423,7 +423,7 @@
   },
   {
     "id": 25032,
-    "image": "course16.jpg",
+    "image": "./src/assets/artificial-intelligence.png",
     "course": "Cloud Computing Essentials",
     "description": "Explore cloud computing principles, services, and deployment models.",
     "price": 169.99,
@@ -443,7 +443,7 @@
   },
   {
     "id": 24343,
-    "image": "course16.jpg",
+    "image": "./src/assets/courses-banner.png",
     "course": "Blockchain Technology Fundamentals",
     "description": "Learn the fundamentals of blockchain technology and cryptocurrencies.",
     "price": 149.99,
@@ -463,7 +463,7 @@
   },
   {
     "id": 75324,
-    "image": "course16.jpg",
+    "image": "./src/assets/artificial-intelligence.png",
     "course": "Artificial Intelligence Ethics and Responsible AI",
     "description": "Explore the ethical considerations and responsible practices in AI development.",
     "price": 129.99,
