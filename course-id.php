@@ -1,6 +1,8 @@
   <?php
+  include './config-db.php';
   session_start();
-  if (!isset($_SESSION['student_id'])) {
+  $student_id = $_SESSION['student_id'];
+  if (!isset($student_id)) {
     header('Location: ./login.php');
     exit();
   }
@@ -25,6 +27,40 @@
       header('Location: ./courses.php');
     }
   }
+
+  // Check if the student is already enrolled in the course
+  $checkEnrollmentStatus = "SELECT * FROM enrolled_courses WHERE student_id = '$student_id' AND course_id = $id";
+  $enrollmentResult = $conn->query($checkEnrollmentStatus);
+  $disabled = "";
+  $enrolled_text = "";
+  if ($enrollmentResult->num_rows > 0) {
+    $enrolled = true;
+    $disabled = "disabled class='bg-emerald-700/60 text-white px-4 py-2 rounded-lg w-full cursor-not-allowed'";
+    $enrolled_text = "Enrolled";
+  } else {
+    $enrolled = false;
+    $enrolled_text = "Enroll";
+  }
+
+  if (isset($_POST['enroll'])) {
+    $course_id = $_POST['course_id'];
+    $reason = mysqli_real_escape_string($conn, $_POST['reason']);
+
+    if (!$enrolled) {
+      // Insert a new enrollment record
+      $insertEnrollmentSql = "INSERT INTO enrolled_courses (student_id, course_id, reason) VALUES ('$student_id', $id, '$reason')";
+
+      if ($conn->query($insertEnrollmentSql) === TRUE) {
+        // Enrollment successful
+        $_SESSION['enrollment_successful'] = 'enrollment_successful';
+        header('Location: ./courses.php');
+      } else {
+        // Error occurred during enrollment
+        $error = "Error during enrollment: ' . $conn->error . '";
+      }
+    }
+  }
+
   ?>
 
   <!doctype html>
@@ -96,7 +132,6 @@
                 echo '</ul>
                 </div>'
                   // Enroll part 2
-                  // TODO - Add a check to see if the student is already enrolled in the course
                   . '
                 <div class="sticky top-20 bg-white ml-3 h-fit w-fit flex flex-col justify-center rounded-lg lg:hidden">
                 <div class="flex flex-col justify-center items-center py-3 bg-emerald-700 text-white font-semibold text-lg rounded-t-lg">
@@ -107,9 +142,9 @@
                   <input type="hidden" name="course_id" value="' . $course['id'] . '">
                   <label for="reason" class="space-y-1">
                   <span class="font-medium text-sm">Reason for enrolling:</span>
-                    <textarea name="reason" id="reason" rows="3" class="text-xs border-2 w-full border-emerald-700 rounded-lg p-2 focus:outline-none"></textarea>
+                    <textarea name="reason" id="reason" placeholder="Write a short note for choosing ' . $course['course'] . ' here..." rows="3" required minlength="20" maxlength="100" class="text-xs border-2 w-full border-emerald-700 rounded-lg p-2 focus:outline-none"></textarea>
                     </label>
-                  <button type="submit" name="enroll" class="bg-emerald-700 text-white px-4 py-2 rounded-lg w-full hover:bg-emerald-800 duration-500">Enroll</button>
+                  <button type="submit" name="enroll" ' . $disabled . ' class="bg-emerald-700 text-white px-4 py-2 rounded-lg w-full hover:bg-emerald-800 duration-500">' . $enrolled_text . '</button>
                 </form>
                   </div>
                 </div>
@@ -125,9 +160,9 @@
                   <input type="hidden" name="course_id" value="' . $course['id'] . '">
                   <label for="reason" class="space-y-1">
                   <span class="font-medium text-sm">Reason for enrolling:</span>
-                    <textarea name="reason" id="reason" rows="3" class="text-xs border-2 w-full border-emerald-700 rounded-lg p-2 focus:outline-none"></textarea>
+                    <textarea name="reason" id="reason" placeholder="Write a short note for choosing ' . $course['course'] . ' here..." rows="3" required minlength="20" maxlength="100" class="text-xs border-2 w-full border-emerald-700 rounded-lg p-2 focus:outline-none"></textarea>
                     </label>
-                  <button type="submit" name="enroll" class="bg-emerald-700 text-white px-4 py-2 rounded-lg w-full hover:bg-emerald-800 duration-500">Enroll</button>
+                  <button type="submit" name="enroll" ' . $disabled . ' class="bg-emerald-700 text-white px-4 py-2 rounded-lg w-full hover:bg-emerald-800 duration-500">' . $enrolled_text . '</button>
                 </form>
                   </div>
                 </div>';

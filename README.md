@@ -2,6 +2,8 @@
 
 Tech School is a web application designed for educational institutions to manage student profiles and course enrollment. It provides students with the ability to edit their profiles, view available courses, and enroll in courses of their choice. This README provides an overview of the Tech School project, including installation instructions and a brief description of its features.
 
+![Screenshots](./src/assets/Screenshot-1.png)
+
 ---
 
 ## Table of Contents
@@ -144,7 +146,6 @@ Here are some common usage scenarios:
 
 ## Screenshots
 
-![Screenshots](./src/assets/Screenshot-1.png)
 ![Screenshots](./src/assets/Screenshot-2.png)
 ![Screenshots](./src/assets/Screenshot-6.png)
 ![Screenshots](./src/assets/Screenshot-3.png)

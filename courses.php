@@ -35,6 +35,8 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
   <div class="flex flex-col justify-between min-h-screen">
     <!-- header -->
     <?php include "./src/components/header.php"; ?>
+    <!-- alert message -->
+    <?php include "./src/components/alert-message.php"; ?>
     <!-- hero -->
     <section class="h-[40vh] md:h-[45vh] lg:h-[50vh] w-screen duration-500"
       style="background: url('./src/assets/data-analytics.png') no-repeat center center / cover;">
@@ -60,7 +62,6 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
               </button>
             </div>
           </form>
-
         </div>
       </div>
     </section>
@@ -72,15 +73,15 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
           <?php foreach ($filteredCourses as $course) { ?>
           <!-- Render matching courses here -->
           <div class="bg-white rounded-lg overflow-hidden hover:shadow-lg">
-            <a href="./course-id.php?id=<?php echo $course['id']?>"><img
+            <a href="./course-id.php?id=<?php echo $course['id'] ?>"><img
                 class="w-full h-24 sm:h-32 lg:h-48 object-cover" src="<?php echo $course['image']; ?>"
                 alt="<?php echo $course['course']; ?>"></a>
             <div class="p-6">
-              <a href="./course-id.php?id=<?php echo $course['id']?>"
+              <a href="./course-id.php?id=<?php echo $course['id'] ?>"
                 class="text-sm sm:text-base md:text-lg font-bold text-emerald-700 mb-2">
                 <?php echo $course['course']; ?></a>
               <p class="text-gray-700 text-base mb-3"><?php echo $course['duration']; ?></p>
-              <a href="./course-id.php?id=<?php echo $course['id']?>"
+              <a href="./course-id.php?id=<?php echo $course['id'] ?>"
                 class="inline-block text-sm sm:text-base bg-emerald-700 text-white px-4 py-2 rounded-lg hover:bg-emerald-800 duration-500">Learn
                 More</a>
             </div>
@@ -102,8 +103,9 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
     </main>
     <!-- footer -->
     <?php include "./src/components/footer.php"; ?>
-
   </div>
+  <!-- Function to hide the alert after 10 seconds -->
+  <script src="./src/components/hide-alert.js"></script>
 </body>
 
 </html>
