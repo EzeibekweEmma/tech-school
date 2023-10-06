@@ -1,5 +1,5 @@
 <?php
-include "./src/auth/config-db.php";
+include "./config-db.php";
 
 if (isset($_POST["subscribe"])) {
   $email = trim($_POST["email"]);

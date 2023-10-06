@@ -28,7 +28,7 @@ if (isset($_COOKIE["remember_user"])) {
         $_SESSION['student_profile_picture'] = $row['profile_picture'];
         $_SESSION['login-successful'] = 'login-successful';
 
-        header('Location: ../../dashboard.php');
+        header('Location: ./dashboard.php');
         exit();
       } else {
         $error = 'Incorrect password. Please try again.';
@@ -68,7 +68,7 @@ if (isset($_POST["login"])) {
         setcookie($cookieName, $cookieValue, $cookieExpiration, "/");
       }
 
-      header('Location: ../../dashboard.php');
+      header('Location: ./dashboard.php');
       exit();
     } else {
       $error = 'Incorrect password. Please try again.';
@@ -87,9 +87,9 @@ $conn->close();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg" href="../assets/favicon.svg" />
-  <link href="../styles/output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="icon" type="image/svg" href="./src/assets/favicon.svg" />
+  <link href="./src/styles/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/styles/main.css">
   <title>Tech School | Login Page</title>
 </head>
 <!-- Login Page -->
@@ -97,7 +97,7 @@ $conn->close();
 <body class="bg-bgColor overflow-x-hidden">
   <div class="flex flex-col justify-between min-h-screen">
     <!-- header -->
-    <?php include "../components/auth-header.php"; ?>
+    <?php include "./src/components/header.php"; ?>
     <!-- main -->
     <main class="flip">
       <section class="background-image background-image2">
@@ -109,7 +109,7 @@ $conn->close();
         </div>
       </section>
       <section class="auth-container">
-        <img src="../assets/favicon.svg" alt="logo" class="logo" />
+        <img src="./src/assets/favicon.svg" alt="logo" class="logo" />
         <form class="auth-form" method="POST" action="login.php">
           <label for="email"><span>Email:</span>
             <input type="email" id="email" name="email" placeholder="Eg: example@email.com" required value="<?php echo isset($_POST['email']) ? htmlspecialchars($_POST['email']) : ''; ?>">
@@ -130,13 +130,13 @@ $conn->close();
       </section>
 
       <!-- alert message -->
-      <?php include "../components/alert-message.php"; ?>
+      <?php include "./src/components/alert-message.php"; ?>
     </main>
     <!-- footer -->
-    <?php include "../components/footer.php"; ?>
+    <?php include "./src/components/footer.php"; ?>
   </div>
   <!-- Function to hide the alert after 10 seconds -->
-  <script src="../components/hide-alert.js"></script>
+  <script src="./src/components/hide-alert.js"></script>
 </body>
 
 </html>

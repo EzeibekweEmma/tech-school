@@ -19,7 +19,7 @@ if (isset($_POST['send'])) {
   try {
     $mail = new PHPMailer(true);
     $mail->isSMTP();
-    $mail->Host = 'smtp.gmail.com';
+    $mail->Host = $env['EMAIL_HOST'];
     $mail->SMTPAuth = true;
     $mail->Username = $env['MAIN_EMAIL'];
     $mail->Password = $env['PASSWORD'];

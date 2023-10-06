@@ -1,10 +1,10 @@
 <?php
-include './src/auth/config-db.php';
+include './config-db.php';
 session_start();
 $student_id = $_SESSION['student_id'];
 
 if (!isset($student_id)) {
-  header('Location: ./src/auth/login.php');
+  header('Location: ./login.php');
   exit();
 }
 

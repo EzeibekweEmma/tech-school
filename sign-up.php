@@ -4,12 +4,12 @@ session_destroy();
 
 include "./config-db.php";
 
-require '../../vendor/autoload.php';
+require './vendor/autoload.php';
 
 use Cloudinary\Configuration\Configuration;
 use Cloudinary\Api\Upload\UploadApi;
 
-$env = parse_ini_file('../../.env');
+$env = parse_ini_file('.env');
 
 // Initialize Cloudinary configuration
 Configuration::instance([
@@ -86,9 +86,9 @@ $conn->close();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg" href="../assets/favicon.svg" />
-  <link href="../styles/output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles/main.css">
+  <link rel="icon" type="image/svg" href="./src/assets/favicon.svg" />
+  <link href="./src/styles/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/styles/main.css">
   <title>Tech School | Sign-up Page</title>
 </head>
 <!-- Sign-up Page -->
@@ -96,7 +96,7 @@ $conn->close();
 <body class="bg-bgColor overflow-x-hidden">
   <div class="flex flex-col justify-between min-h-screen">
     <!-- header -->
-    <?php include "../components/auth-header.php";
+    <?php include "./src/components/header.php";
     ?>
     <!-- main -->
     <main class="break-point">
@@ -108,7 +108,7 @@ $conn->close();
         </div>
       </section>
       <section class="auth-container">
-        <img src="../assets/favicon.svg" alt="logo" class="logo" />
+        <img src="./src/assets/favicon.svg" alt="logo" class="logo" />
         <form class="auth-form" method="POST" action="" enctype="multipart/form-data">
           <label for="fullName"><span>Full Name:</span>
             <input type="text" id="fullName" name="fullName" placeholder="Eg: First-name Last-name" required minlength="5" value="<?php echo isset($_POST['fullName']) ? htmlspecialchars($_POST['fullName']) : ''; ?>">
@@ -133,13 +133,13 @@ $conn->close();
         </form>
       </section>
       <!-- alert message -->
-      <?php include "../components/alert-message.php"; ?>
+      <?php include "./src/components/alert-message.php"; ?>
     </main>
     <!-- footer -->
-    <?php include "../components/footer.php"; ?>
+    <?php include "./src/components/footer.php"; ?>
   </div>
   <!-- Function to hide the alert after 10 seconds -->
-  <script src="../components/hide-alert.js"></script>
+  <script src="./src/components/hide-alert.js"></script>
 </body>
 
 </html>

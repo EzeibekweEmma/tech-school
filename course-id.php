@@ -1,7 +1,7 @@
   <?php
   session_start();
   if (!isset($_SESSION['student_id'])) {
-    header('Location: ./src/auth/login.php');
+    header('Location: ./login.php');
     exit();
   }
   // Read course data from a JSON file
@@ -45,8 +45,7 @@
       <!-- header -->
       <?php include "./src/components/header.php"; ?>
       <!-- hero -->
-      <section class="h-[30vh] md:h-[40vh] w-screen duration-500"
-        style="background: url(<?php echo $bg_image ?>) no-repeat center center / cover;">
+      <section class="h-[30vh] md:h-[40vh] w-screen duration-500" style="background: url(<?php echo $bg_image ?>) no-repeat center center / cover;">
         <div class="relative flex items-center justify-center h-full w-full bg-[#101f3680] ">
 
           <div class="px-10 md:px-20">

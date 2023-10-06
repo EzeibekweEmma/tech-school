@@ -38,10 +38,10 @@ $conn->close();
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <link rel="icon" type="image/svg" href="../assets/favicon.svg" />
-  <link href="../styles/output.css" rel="stylesheet" />
-  <link rel="stylesheet" href="../styles/main.css">
-  <link rel="stylesheet" href="../styles/main2.css">
+  <link rel="icon" type="image/svg" href="./src/assets/favicon.svg" />
+  <link href="./src/styles/output.css" rel="stylesheet" />
+  <link rel="stylesheet" href="./src/styles/main.css">
+  <link rel="stylesheet" href="./src/styles/main2.css">
   <title>Tech School | Reset Password Page</title>
 </head>
 <!-- Reset Password Page -->
@@ -49,12 +49,12 @@ $conn->close();
 <body class="bg-bgColor overflow-x-hidden">
   <div class="flex flex-col justify-between min-h-screen">
     <!-- header -->
-    <?php include "../components/auth-header.php"; ?>
+    <?php include "./src/components/header.php"; ?>
     <!-- main -->
     <main>
       <section class="background-image background-image3">
         <section class="auth-container">
-          <img src="../assets/favicon.svg" alt="logo" class="logo" />
+          <img src="./src/assets/favicon.svg" alt="logo" class="logo" />
           <form class="auth-form" method="POST" action="">
             <label for="password"><span>Password:</span>
               <input type="password" id="password" name="password" placeholder="Enter Your Password" minlength="8" required>
@@ -67,15 +67,15 @@ $conn->close();
         </section>
 
         <!-- alert message -->
-        <?php include "../components/alert-message.php"; ?>
+        <?php include "./src/components/alert-message.php"; ?>
       </section>
       </section>
     </main>
     <!-- footer -->
-    <?php include "../components/footer.php"; ?>
+    <?php include "./src/components/footer.php"; ?>
   </div>
   <!-- Function to hide the alert after 10 seconds -->
-  <script src="../components/hide-alert.js"></script>
+  <script src="./src/components/hide-alert.js"></script>
 </body>
 
 </html>
