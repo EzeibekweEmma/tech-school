@@ -14,7 +14,8 @@ Tech School is a web application designed for educational institutions to manage
   - [Getting Started](#getting-started)
     - [Prerequisites](#prerequisites)
     - [Installation](#installation)
-  - [Usage](#usage)
+  - [**Usage**](#usage)
+  - [Screenshots](#screenshots)
   - [Contributing](#contributing)
   - [License](#license)
   - [Acknowledgments](#acknowledgments)
@@ -31,7 +32,7 @@ Tech School is a web application designed for educational institutions to manage
 - **DaisyUI**: A plugin for Tailwind CSS that provides a set of beautiful UI components.
 - **JSON**: A lightweight data interchange format for storing and exchanging data.
 
-  #### Third Party Services And Libraries
+  ### Third Party Services And Libraries
 
   - **Composer**: A PHP package manager used for dependency management.
   - **Cloudinary**: A cloud-based image and video management service.
@@ -127,7 +128,7 @@ To run Tech School, you need the following software:
 
 ---
 
-## Usage
+## **Usage**
 
 Tech School is designed to be a customizable educational platform. You can extend its functionality by adding more features, such as course creation, admin management, and additional user roles. Customize the styles, layouts, and UI to match your institution's branding.
 
@@ -138,6 +139,17 @@ Here are some common usage scenarios:
 - **Course Enrollment**: Students can browse available courses and enroll in those of interest.
 - **Dashboard**: After logging in, students can access their personalized dashboard with profile details and enrolled courses.
 - **User Profiles**: Create and customize your user profile with a profile picture and background image.
+
+---
+
+## Screenshots
+
+![Screenshots](./src/assets/Screenshot-1.png)
+![Screenshots](./src/assets/Screenshot-2.png)
+![Screenshots](./src/assets/Screenshot-6.png)
+![Screenshots](./src/assets/Screenshot-3.png)
+![Screenshots](./src/assets/Screenshot-4.png)
+![Screenshots](./src/assets/Screenshot-5.png)
 
 ---
 
