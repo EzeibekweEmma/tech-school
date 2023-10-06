@@ -15,6 +15,7 @@
     foreach ($courses as $course) {
       if ($course['id'] == $_GET['id']) {
         $id = $_GET['id'];
+        $bg_image = $course['image'];
         $courseNotFound = false;
         break;
       }
@@ -44,7 +45,8 @@
       <!-- header -->
       <?php include "./src/components/header.php"; ?>
       <!-- hero -->
-      <section class="h-[30vh] md:h-[40vh] w-screen duration-500" style="background: url('./src/assets/data-analytics.png') no-repeat center center / cover;">
+      <section class="h-[30vh] md:h-[40vh] w-screen duration-500"
+        style="background: url(<?php echo $bg_image ?>) no-repeat center center / cover;">
         <div class="relative flex items-center justify-center h-full w-full bg-[#101f3680] ">
 
           <div class="px-10 md:px-20">
@@ -95,6 +97,7 @@
                 echo '</ul>
                 </div>'
                   // Enroll part 2
+                  // TODO - Add a check to see if the student is already enrolled in the course
                   . '
                 <div class="sticky top-20 bg-white ml-3 h-fit w-fit flex flex-col justify-center rounded-lg lg:hidden">
                 <div class="flex flex-col justify-center items-center py-3 bg-emerald-700 text-white font-semibold text-lg rounded-t-lg">
