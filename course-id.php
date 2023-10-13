@@ -44,11 +44,12 @@
 
   if (isset($_POST['enroll'])) {
     $course_id = $_POST['course_id'];
+    $course_title = mysqli_real_escape_string($conn, $_POST['course_title']);
     $reason = mysqli_real_escape_string($conn, $_POST['reason']);
 
     if (!$enrolled) {
       // Insert a new enrollment record
-      $insertEnrollmentSql = "INSERT INTO enrolled_courses (student_id, course_id, reason) VALUES ('$student_id', $id, '$reason')";
+      $insertEnrollmentSql = "INSERT INTO enrolled_courses (student_id, course_id, course_title, reason) VALUES ('$student_id', $id, '$course_title', '$reason')";
 
       if ($conn->query($insertEnrollmentSql) === TRUE) {
         // Enrollment successful
@@ -140,6 +141,7 @@
                 </div>
                 <form action="" method="post" class="flex flex-col justify-center items-center py-5 px-2 space-y-2 rounded-b-lg">
                   <input type="hidden" name="course_id" value="' . $course['id'] . '">
+                  <input type="hidden" name="course_title" value="' . $course['course'] . '">
                   <label for="reason" class="space-y-1">
                   <span class="font-medium text-sm">Reason for enrolling:</span>
                     <textarea name="reason" id="reason" placeholder="Write a short note for choosing ' . $course['course'] . ' here..." rows="3" required minlength="20" maxlength="100" class="text-xs border-2 w-full border-emerald-700 rounded-lg p-2 focus:outline-none"></textarea>
@@ -158,6 +160,7 @@
                 </div>
                 <form action="" method="post" class="flex flex-col justify-center items-center py-5 px-2 space-y-2 rounded-b-lg">
                   <input type="hidden" name="course_id" value="' . $course['id'] . '">
+                  <input type="hidden" name="course_title" value="' . $course['course'] . '">
                   <label for="reason" class="space-y-1">
                   <span class="font-medium text-sm">Reason for enrolling:</span>
                     <textarea name="reason" id="reason" placeholder="Write a short note for choosing ' . $course['course'] . ' here..." rows="3" required minlength="20" maxlength="100" class="text-xs border-2 w-full border-emerald-700 rounded-lg p-2 focus:outline-none"></textarea>

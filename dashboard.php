@@ -21,6 +21,11 @@ if ($result->num_rows === 1) {
   $background_img = $student['background_img'];
 }
 
+// Check if the student is already enrolled in the course
+$checkEnrollmentStatus = "SELECT * FROM enrolled_courses WHERE student_id = '$student_id'";
+$enrollmentResult = $conn->query($checkEnrollmentStatus);
+$total_courses_enrolled = $enrollmentResult->num_rows;
+
 $conn->close();
 ?>
 
@@ -87,24 +92,37 @@ $conn->close();
             <span class="text-base font-medium"><?php echo $email ?></span>
             <span class="text-base font-medium"><?php echo $phone ?></span>
             <div class="flex space-x-2 text-gray-500 font-medium text-sm">
-              <!-- TODO implement the value dynamically -->
-              <span>0 Courses Enrolled</span>
+              <span><?php echo $total_courses_enrolled ?> Courses Enrolled</span>
               <span>-</span>
               <span>0 Courses Completed</span>
             </div>
           </div>
         </section>
         <!-- Courses -->
-        <section class="flex justify-center w-[85vw] min-h-[50vh] mb-10">
+        <section class="flex justify-center w-[85vw] mb-10">
           <section class="flex flex-col md:flex-row justify-around duration-700">
-            <div class="w-[80vw] md:w-[40vw] rounded-lg border-2 bg-white p-2 min-h-[20vh] duration-700">
+            <div class="w-[80vw] md:w-[40vw] rounded-lg border-2 bg-white p-2 min-h-[20vh] mb-5 md:mb-0 duration-700">
               <h2 class="underline font-medium text-center">Courses Enrolled</h2>
               <div class="w-full h-full flex justify-center items-center">
-                <p class="font-medium text-gray-400">No courses enrolled yet.</p>
+                <!-- list of courses enrolled -->
+                <?php
+                if ($total_courses_enrolled > 0) {
+                  echo '<ul class="flex flex-col space-y-2 text-gray-800 list-disc mb-10">';
+                  while ($row = $enrollmentResult->fetch_assoc()) {
+                    $course_title = $row['course_title'];
+                    echo "<li>$course_title</li>";
+                  }
+                  echo '</ul>';
+                } else {
+
+                  echo '<p class="font-medium text-gray-400">No courses enrolled yet.</p>';
+                }
+                ?>
               </div>
             </div>
-            <div class="w-[80vw] md:w-[40vw] rounded-lg border-2 bg-white p-2 min-h-[20vh] duration-700">
+            <div class="w-[80vw] md:w-[40vw] rounded-lg border-2 bg-white p-2 min-h-[20vh] mb-5 md:mb-0 duration-700">
               <h2 class="underline font-medium text-center">Courses completed</h2>
+              <!-- TODO Implement the list of courses completed -->
               <div class="w-full h-full flex justify-center items-center">
                 <p class="font-medium text-gray-400">No courses Complete yet.</p>
               </div>

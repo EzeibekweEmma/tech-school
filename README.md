@@ -126,7 +126,13 @@ To run Tech School, you need the following software:
    http://localhost/tech-school
    ```
 
-7. You can now register an account, log in, and explore the features of Tech School.
+7. If you made any changes to the application, run the following command to recompile the CSS:
+
+   ```bash
+   npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch
+   ```
+
+8. You can now register an account, log in, and explore the features of Tech School.
 
 ---
 
