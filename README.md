@@ -120,16 +120,16 @@ To run Tech School, you need the following software:
    mysql -u your_database_username -p your_database_name < db/schema.sql
    ```
 
-6. Start your web server and navigate to the Tech School application in your web browser.
-
-   ```bash
-   http://localhost/tech-school
-   ```
-
-7. If you made any changes to the application, run the following command to recompile the CSS:
+6. Run the following command to recompile the CSS:
 
    ```bash
    npx tailwindcss -i ./src/styles/input.css -o ./src/styles/output.css --watch
+   ```
+
+7. Start your web server and navigate to the Tech School application in your web browser.
+
+   ```bash
+   http://localhost/tech-school
    ```
 
 8. You can now register an account, log in, and explore the features of Tech School.
