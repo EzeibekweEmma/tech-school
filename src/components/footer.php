@@ -11,14 +11,16 @@ if (isset($_POST["subscribe"])) {
   if ($result->num_rows > 0) {
     $subscribe_already = "true";
   } else {
-      $sql = "INSERT INTO newsletter (email) VALUES ('$email')";
+    $sql = "INSERT INTO newsletter (email) VALUES ('$email')";
 
-      if ($conn->query($sql) === TRUE) {
+    if ($conn->query($sql) === TRUE) {
       $subscribe_successful = "true";
-        exit();
-      } else {
-        $error = $sql .' <br> '. $conn->error;
-      }}
+      header("Location: index.php");
+      exit();
+    } else {
+      $error = $sql . ' <br> ' . $conn->error;
+    }
+  }
 }
 ?>
 
@@ -26,19 +28,37 @@ if (isset($_POST["subscribe"])) {
   <section class="footer text-base-content w-[85vw]">
 
     <aside>
-      <svg width="50" height="50" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1.5"
+      <svg width="80" height="80" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="1"
         stroke="currentColor" class="text-emerald-700">
         <path stroke-linecap="round" stroke-linejoin="round"
           d="M4.098 19.902a3.75 3.75 0 005.304 0l6.401-6.402M6.75 21A3.75 3.75 0 013 17.25V4.125C3 3.504 3.504 3 4.125 3h5.25c.621 0 1.125.504 1.125 1.125v4.072M6.75 21a3.75 3.75 0 003.75-3.75V8.197M6.75 21h13.125c.621 0 1.125-.504 1.125-1.125v-5.25c0-.621-.504-1.125-1.125-1.125h-4.072M10.5 8.197l2.88-2.88c.438-.439 1.15-.439 1.59 0l3.712 3.713c.44.44.44 1.152 0 1.59l-2.879 2.88M6.75 17.25h.008v.008H6.75v-.008z" />
       </svg>
       <p>Tech School Ltd &copy; 2023.<br />Providing reliable tech since 1992</p>
-      <!-- Social media icons -->
-      <div class="flex justify-between items-center w-full -ml-1">
+    </aside>
+    <nav>
+      <header class="text-emerald-700 text-sm font-bold uppercase">Services</header>
+      <a class="link link-hover">Branding</a>
+      <a class="link link-hover">Design</a>
+      <a class="link link-hover">Marketing</a>
+      <a class="link link-hover">Advertisement</a>
+    </nav>
+    <nav>
+      <header class="text-emerald-700 text-sm font-bold uppercase">Company</header>
+      <a class="link link-hover">About us</a>
+      <a class="link link-hover">Contact</a>
+      <a class="link link-hover">Jobs</a>
+      <a class="link link-hover">Press kit</a>
+    </nav>
+    <!-- Social media icons -->
+    <nav>
+      <header class="text-emerald-700 text-sm font-bold uppercase">Social</header>
+      <p class="mb-2">You can find us on!</p>
+      <div class="flex justify-between space-x-1 lg:space-x-3 items-center w-full">
         <!-- Gmail -->
         <a href="mailto:ezeibekweemma@gmail.com">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="40px" height="40px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <path
               d="M2 11.9556C2 8.47078 2 6.7284 2.67818 5.39739C3.27473 4.22661 4.22661 3.27473 5.39739 2.67818C6.7284 2 8.47078 2 11.9556 2H20.0444C23.5292 2 25.2716 2 26.6026 2.67818C27.7734 3.27473 28.7253 4.22661 29.3218 5.39739C30 6.7284 30 8.47078 30 11.9556V20.0444C30 23.5292 30 25.2716 29.3218 26.6026C28.7253 27.7734 27.7734 28.7253 26.6026 29.3218C25.2716 30 23.5292 30 20.0444 30H11.9556C8.47078 30 6.7284 30 5.39739 29.3218C4.22661 28.7253 3.27473 27.7734 2.67818 26.6026C2 25.2716 2 23.5292 2 20.0444V11.9556Z"
               fill="white" />
@@ -65,7 +85,7 @@ if (isset($_POST["subscribe"])) {
         <a href="https://twitter.com/EzeibekweEmma" target="_blank">
           <?xml version="1.0" encoding="UTF-8" standalone="no"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="20px" height="30px" viewBox="0 -4 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
+          <svg width="30px" height="40px" viewBox="0 -4 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
             xmlns:xlink="http://www.w3.org/1999/xlink">
 
             <title>Twitter-color</title>
@@ -88,7 +108,7 @@ if (isset($_POST["subscribe"])) {
         <a href="https://instagram.com/EzeibekweEmma" target="_blank">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="22px" height="22px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
             <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint0_radial_87_7153)" />
             <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint1_radial_87_7153)" />
             <rect x="2" y="2" width="28" height="28" rx="6" fill="url(#paint2_radial_87_7153)" />
@@ -128,7 +148,7 @@ if (isset($_POST["subscribe"])) {
         <a href="https://linkedIn.com/in/EzeibekweEmma" target="_blank">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="25px" height="25px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <svg width="35px" height="35px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
             <path fill="#0A66C2"
               d="M12.225 12.225h-1.778V9.44c0-.664-.012-1.519-.925-1.519-.926 0-1.068.724-1.068 1.47v2.834H6.676V6.498h1.707v.783h.024c.348-.594.996-.95 1.684-.925 1.802 0 2.135 1.185 2.135 2.728l-.001 3.14zM4.67 5.715a1.037 1.037 0 01-1.032-1.031c0-.566.466-1.032 1.032-1.032.566 0 1.031.466 1.032 1.032 0 .566-.466 1.032-1.032 1.032zm.889 6.51h-1.78V6.498h1.78v5.727zM13.11 2H2.885A.88.88 0 002 2.866v10.268a.88.88 0 00.885.866h10.226a.882.882 0 00.889-.866V2.865a.88.88 0 00-.889-.864z" />
           </svg>
@@ -137,7 +157,7 @@ if (isset($_POST["subscribe"])) {
         <a href="https://facebook.com/EzeibekweEmma" target="_blank">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
-          <svg width="25px" height="30px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
+          <svg width="35px" height="35px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
             <path fill="#1877F2"
               d="M15 8a7 7 0 00-7-7 7 7 0 00-1.094 13.915v-4.892H5.13V8h1.777V6.458c0-1.754 1.045-2.724 2.644-2.724.766 0 1.567.137 1.567.137v1.723h-.883c-.87 0-1.14.54-1.14 1.093V8h1.941l-.31 2.023H9.094v4.892A7.001 7.001 0 0015 8z" />
             <path fill="#ffffff"
@@ -145,36 +165,6 @@ if (isset($_POST["subscribe"])) {
           </svg>
         </a>
       </div>
-    </aside>
-    <nav>
-      <header class="text-emerald-700 text-sm font-bold uppercase">Services</header>
-      <a class="link link-hover">Branding</a>
-      <a class="link link-hover">Design</a>
-      <a class="link link-hover">Marketing</a>
-      <a class="link link-hover">Advertisement</a>
     </nav>
-    <nav>
-      <header class="text-emerald-700 text-sm font-bold uppercase">Company</header>
-      <a class="link link-hover">About us</a>
-      <a class="link link-hover">Contact</a>
-      <a class="link link-hover">Jobs</a>
-      <a class="link link-hover">Press kit</a>
-    </nav>
-    <!-- TODO: fix alert message -->
-    <form method="POST" action="">
-      <header class="text-emerald-700 text-sm font-bold uppercase">Newsletter</header>
-      <fieldset class="form-control w-80">
-        <label class="label">
-          <span class="label-text">Enter your email address</span>
-        </label>
-        <div class="relative">
-          <input type="email" name="email" required placeholder="username@site.com"
-            class="input input-bordered w-full pr-16" />
-          <button
-            class="btn bg-emerald-700 hover:bg-emerald-800 duration-500 focus:scale-90 text-white absolute top-0 right-0 rounded-l-none"
-            name="subscribe">Subscribe</button>
-        </div>
-      </fieldset>
-    </form>
   </section>
 </footer>
