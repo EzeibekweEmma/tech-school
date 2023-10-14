@@ -56,7 +56,7 @@
           </svg>
         </a>
         <!-- Twitter -->
-        <a href="https://twitter.com/EzeibekweEmma" target="_blank">
+        <a href="mailto:ezeibekweemma@gmail.com" target="_blank">
           <?xml version="1.0" encoding="UTF-8" standalone="no"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
           <svg width="30px" height="40px" viewBox="0 -4 48 48" version="1.1" xmlns="http://www.w3.org/2000/svg"
@@ -79,7 +79,7 @@
           </svg>
         </a>
         <!-- Instagram -->
-        <a href="https://instagram.com/EzeibekweEmma" target="_blank">
+        <a href="mailto:ezeibekweemma@gmail.com" target="_blank">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
           <svg width="30px" height="30px" viewBox="0 0 32 32" fill="none" xmlns="http://www.w3.org/2000/svg">
@@ -119,7 +119,7 @@
           </svg>
         </a>
         <!-- LinkedIn -->
-        <a href="https://linkedIn.com/in/EzeibekweEmma" target="_blank">
+        <a href="mailto:ezeibekweemma@gmail.com" target="_blank">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
           <svg width="35px" height="35px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
@@ -128,7 +128,7 @@
           </svg>
         </a>
         <!-- Facebook -->
-        <a href="https://facebook.com/EzeibekweEmma" target="_blank">
+        <a href="mailto:ezeibekweemma@gmail.com" target="_blank">
           <?xml version="1.0" encoding="utf-8"?>
           <!-- Uploaded to: SVG Repo, www.svgrepo.com, Generator: SVG Repo Mixer Tools -->
           <svg width="35px" height="35px" viewBox="0 0 16 16" xmlns="http://www.w3.org/2000/svg" fill="none">
