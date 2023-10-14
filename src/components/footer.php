@@ -1,29 +1,3 @@
-<?php
-include "./config-db.php";
-
-if (isset($_POST["subscribe"])) {
-  $email = trim($_POST["email"]);
-  $error = '';
-
-  $checkEmailQuery = "SELECT * FROM newsletter WHERE email = '$email'";
-  $result = $conn->query($checkEmailQuery);
-
-  if ($result->num_rows > 0) {
-    $subscribe_already = "true";
-  } else {
-    $sql = "INSERT INTO newsletter (email) VALUES ('$email')";
-
-    if ($conn->query($sql) === TRUE) {
-      $subscribe_successful = "true";
-      header("Location: index.php");
-      exit();
-    } else {
-      $error = $sql . ' <br> ' . $conn->error;
-    }
-  }
-}
-?>
-
 <footer class="flex justify-center bg-white shadow-lg p-10 border-t-2 border-gray-400">
   <section class="footer text-base-content w-[85vw]">
 
