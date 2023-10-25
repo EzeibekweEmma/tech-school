@@ -1,7 +1,6 @@
 <?php
 include "./config-db.php";
 session_start();
-session_destroy();
 if (isset($_POST["forget-password"])) {
 
   $email = mysqli_real_escape_string($conn, trim($_POST["email"]));
@@ -12,13 +11,13 @@ if (isset($_POST["forget-password"])) {
 
   if ($result->num_rows === 1) {
     $row = $result->fetch_assoc();
-    session_start();
     $_SESSION['user_id'] = $row['id'];
     header('location: ./reset-password.php');
   } else {
     $error =  "Email not registered!";
   }
-}
+} else session_destroy();
+
 $conn->close();
 ?>
 <!Doctype html>

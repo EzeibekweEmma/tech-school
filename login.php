@@ -22,7 +22,6 @@ if (isset($_COOKIE["remember_user"])) {
       $hashedPassword = $row['password'];
 
       if (password_verify($password, $hashedPassword)) {
-        session_start();
         $_SESSION['student_id'] = $row['id'];
         $_SESSION['student_full_name'] = $row['full_name'];
         $_SESSION['student_profile_picture'] = $row['profile_picture'];
@@ -54,7 +53,6 @@ if (isset($_POST["login"])) {
     $hashedPassword = $row['password'];
 
     if (password_verify($password, $hashedPassword)) {
-      session_start();
       $_SESSION['student_id'] = $row['id'];
       $_SESSION['student_full_name'] = $row['full_name'];
       $_SESSION['student_profile_picture'] = $row['profile_picture'];

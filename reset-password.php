@@ -1,6 +1,6 @@
 <?php
-include "./config-db.php";
 session_start();
+include "./config-db.php";
 if (!isset($_SESSION["user_id"])) {
   header('location: ./forget-password.php');
 }
@@ -21,7 +21,6 @@ if (isset($_POST["set-password"])) {
     $updateQuery = "UPDATE students SET password = '$hashedPassword' WHERE id = '$userId'";
 
     if ($conn->query($updateQuery) === TRUE) {
-      session_start();
       $_SESSION['reset-successful'] = 'reset-successful';
       header('Location: ./login.php');
       exit();

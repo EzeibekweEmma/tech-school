@@ -2,8 +2,6 @@
 
 Tech School is a web application designed for educational institutions to manage student profiles and course enrollment. It provides students with the ability to edit their profiles, view available courses, and enroll in courses of their choice. This README provides an overview of the Tech School project, including installation instructions and a brief description of its features.
 
-![Screenshots](./src/assets/Screenshot-1.png)
-
 ---
 
 ## Table of Contents
@@ -186,3 +184,4 @@ This project is licensed under the MIT License - see the [LICENSE](LICENSE) file
 - [XAMPP](https://www.apachefriends.org/index.html) - A free and open-source cross-platform web server solution stack.
 - [TailwindCSS](https://tailwindcss.com/) - A utility-first CSS framework for building modern web applications.library.
 - [HeroIcons](https://heroicons.com/) - Beautiful hand-crafted SVG icons.
+- [000webhost](https://000webhost.com/) - Free web hosting service.

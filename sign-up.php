@@ -1,6 +1,5 @@
 <?php
 session_start();
-session_destroy();
 
 include "./config-db.php";
 
@@ -67,7 +66,6 @@ if (isset($_POST["signup"])) {
                                     VALUES ('$id', '$fullName', '$email', '$phone', '$profilePicturePath', '$password')";
 
       if ($conn->query($sql) === TRUE) {
-        session_start();
         $_SESSION['signup-successful'] = 'signup-successful';
         header('Location: ./login.php');
         exit();
@@ -76,7 +74,7 @@ if (isset($_POST["signup"])) {
       }
     }
   }
-}
+} else session_destroy();
 
 $conn->close();
 ?>
